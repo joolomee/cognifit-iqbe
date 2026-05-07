@@ -40,8 +40,8 @@
   --radius-pill: 999px;
   --radius-input: 14px;
 
-  /* Typo */
-  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  /* Typo (alinhada com cognifit.com/longevity) */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --fs-h1: clamp(40px, 6vw, 90px);    /* hero */
   --fs-h2: clamp(36px, 4.5vw, 52px);  /* section title */
   --fs-h3: 20px;                       /* card title */
@@ -53,7 +53,13 @@
 
 **Selecção:** `::selection { background: rgba(0,102,255,0.20); color: #0066FF; }`
 
-**Fontes:** carrega `Outfit` via Google Fonts (300, 400, 500, 600, 700, 800, 900). Pré-conecta `fonts.googleapis.com` e `fonts.gstatic.com`.
+**Fontes:** carrega `Plus Jakarta Sans` via Google Fonts (200, 300, 400, 500, 600, 700, 800), idêntica à usada em `cognifit.com/longevity`. Pré-conecta `fonts.googleapis.com` e `fonts.gstatic.com`.
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+```
 
 ## Componentes-base
 
