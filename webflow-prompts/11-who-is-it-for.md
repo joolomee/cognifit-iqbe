@@ -30,10 +30,8 @@ CONTENT (z-index 10, position relative)
 
 SECTION HEADER
 - H2: "Who Is the IQbe Intelligence Test Aimed At?"
-  (PT: "Para quem é o teste de inteligência IQbe?")
 - Subtitle (max 750px):
   "IQbe is designed to be highly accessible and deeply informative for both personal growth and professional cognitive screening."
-  (PT: "O IQbe é altamente acessível e profundamente informativo, tanto para crescimento pessoal como para rastreio cognitivo profissional.")
 
 GRID (mt 48px, max-width 1000px centered, grid 1/2/3 cols mobile/tablet/desktop, gap 24px)
 
@@ -63,23 +61,18 @@ OS 5 AUDIENCE CARDS:
 
 1) Ícone User — "Adults"
    Desc: "Evaluate your IQ intelligence and discover your cognitive strengths with a scientifically validated intelligence test."
-   (PT: "Avalia o teu QI e descobre as tuas forças cognitivas com um teste cientificamente validado.")
 
 2) Ícone GraduationCap — "Children & Teens (13+)"
    Desc: "A great mental health test for families wanting to support and track fluid intelligence development across life stages."
-   (PT: "Um excelente mental health test para famílias que queiram acompanhar o desenvolvimento da inteligência fluida.")
 
 3) Ícone CheckCircle2 — "Seniors"
    Desc: "A comprehensive brain test mental assessment to monitor cognitive health, executive function, and spatial perception as we age."
-   (PT: "Um brain test mental completo para monitorizar saúde cognitiva, função executiva e percepção espacial à medida que envelhecemos.")
 
 4) Ícone Briefcase — "Health Professionals"
    Desc: "Doctors, psychologists, and clinicians use this mental health test to reliably assess a patient's reasoning and executive problem-solving."
-   (PT: "Médicos, psicólogos e clínicos usam este teste para avaliar com fiabilidade o raciocínio e a função executiva do paciente.")
 
 5) Ícone Globe — "Researchers & Schools"
    Desc: "Academic and educational institutions rely on this standardized intelligence test to gather bias-free, non-verbal data."
-   (PT: "Instituições académicas e educativas usam este teste padronizado para recolher dados não-verbais sem viés cultural.")
 
 ANIMAÇÕES
 - Section header: FadeIn.

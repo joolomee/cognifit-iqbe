@@ -32,19 +32,16 @@ CONTENT (z 10, max-width 800px centered, padding 24px, text-center)
 H2 (FadeIn standard):
 - Plus Jakarta Sans 800, clamp(36px, 5vw, 60px), tracking-tight, leading-tight #0A102E, mb 24px.
 - "Ready to Discover Your IQ?"
-  (PT: "Pronto/a para descobrir o teu QI?")
 
 SUBHEADLINE (mb 40px):
 - 18-20px weight 300 (light), line-height 1.6, max-width 600px centered, #4A5578.
 - "Take CogniFit's interactive IQbe test and see how your reasoning compares to the reference population."
-  (PT: "Faz o teste interactivo IQbe da CogniFit e descobre como o teu raciocínio se compara à população de referência.")
 
 CTA BUTTON (centered, flex column sm:row gap 24px)
 - Pill primário grande: padding 20px 40px, fonte 18px weight 700.
 - Background: linear-gradient(90deg, #0066FF, #00A3FF).
 - Hover: from #0055DD to #0088DD + translateY -2px + shadow xl.
 - Texto: "Check My IQ Score" + ícone ArrowRight 20px ml 8px.
-  (PT: "Saber o meu QI" / "Começar avaliação grátis")
 - onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
 
 TRUST PILLS (mt 40px, flex wrap justify-center gap-x 24px gap-y 12px, 14px weight 700 #4A5578)
@@ -52,17 +49,14 @@ TRUST PILLS (mt 40px, flex wrap justify-center gap-x 24px gap-y 12px, 14px weigh
 3 itens com separadores dot 6px rgba(0,102,255,0.20):
 
 1) Zap icon 16px #FFB800 + "Fast online assessment"
-   (PT: "Avaliação online rápida")
 
 2) (separador dot)
 
 3) CheckCircle 16px #00D4AA + "Non-verbal"
-   (PT: "Não-verbal")
 
 4) (separador dot)
 
 5) Mini badge custom 16px (w-4 h-4 gradient bg #0066FF→#00E5FF, rounded full, shadow 0 2px 5px rgba(0,102,255,0.30), centered ✓ branco 10px) + "Scientifically grounded"
-   (PT: "Cientificamente fundamentado")
 
 ANIMAÇÕES
 - H2: FadeIn standard (entrada y 40 → 0).

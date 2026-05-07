@@ -13,10 +13,8 @@ LAYOUT
 
 SECTION HEADER
 - H2: "How the IQ Test Works"
-  (PT: "Como funciona o teste")
 - Subtitle (max 750px, centered):
   "Taking the IQbe intelligence test is simple, fast, and 100% online. Follow these three steps to accurately measure your fluid intelligence and cognitive health."
-  (PT: "Fazer o teste IQbe é simples, rápido e 100% online. Segue estes três passos para medires com precisão a tua inteligência fluida e saúde cognitiva.")
 
 CONTENT (mt 48px, position relative)
 
@@ -51,23 +49,17 @@ Os 3 passos:
 PASSO 1
 - Ícone: 📝 (clipboard / pen, ou Phosphor "ClipboardText").
 - Title: "Register & Start"
-  (PT: "Regista-te e começa")
 - Desc: "Create an account to securely access the premium intelligence test."
-  (PT: "Cria uma conta para aceder em segurança ao teste de inteligência premium.")
 
 PASSO 2
 - Ícone: 🧩 (puzzle, ou Phosphor "PuzzlePiece").
 - Title: "Solve the 3D Puzzles"
-  (PT: "Resolve os puzzles 3D")
 - Desc: "Complete the brain test mental assessment by rotating cubes to find logical rules."
-  (PT: "Completa a avaliação rotando cubos 3D para encontrar as regras lógicas.")
 
 PASSO 3
 - Ícone: 📊 (chart, ou Phosphor "ChartLineUp").
 - Title: "Get Your IQ Score"
-  (PT: "Recebe o teu QI")
 - Desc: "Instantly receive a detailed PDF report of your IQ intelligence and cognitive profile."
-  (PT: "Recebes instantaneamente um relatório PDF detalhado do teu QI e perfil cognitivo.")
 
 ANIMAÇÕES
 - SectionHeader: FadeIn no scroll-into-view.

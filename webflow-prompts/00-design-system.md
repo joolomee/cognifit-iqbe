@@ -172,9 +172,8 @@
   <!-- Theme -->
   <meta name="theme-color" content="#F4F7FB" />
 
-  <!-- hreflang (caso multilíngue) -->
+  <!-- hreflang — master EN. Adicionar PT/ES só se as variantes existirem em páginas separadas. -->
   <link rel="alternate" hreflang="en" href="https://brain.cognifit.com/IQ-test" />
-  <link rel="alternate" hreflang="es" href="https://brain.cognifit.com/es/IQ-test" />
   <link rel="alternate" hreflang="x-default" href="https://brain.cognifit.com/IQ-test" />
 </head>
 ```

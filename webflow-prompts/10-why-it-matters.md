@@ -12,10 +12,8 @@ LAYOUT
 
 SECTION HEADER
 - H2: "Why IQbe Matters Beyond Traditional IQ Tests"
-  (PT: "Porque é que o IQbe importa além dos testes tradicionais")
 - Subtitle (max 750px centered):
   "Real-world cognition is not only about spotting a rule on a flat page. It also involves holding information in mind, manipulating it, planning the next step, and responding efficiently. IQbe was designed to bring those demands closer to the testing experience through interactive 3D problem solving."
-  (PT: "A cognição real não é só detectar regras numa folha. É reter informação, manipulá-la, planear o próximo passo e responder com eficiência. O IQbe foi desenhado para aproximar essas exigências da experiência de teste, através de problemas interactivos em 3D.")
 
 GRID (mt 48px, max-width 1000px centered, grid 1/3 cols mobile/desktop, gap 24px)
 
@@ -40,15 +38,12 @@ OS 3 CARDS:
 
 1) Ícone Zap — "More dynamic"
    Desc: "than static paper tests"
-   (PT: Title "Mais dinâmico" / Desc "do que testes em papel")
 
 2) Ícone Hand — "More engaging"
    Desc: "for digital users"
-   (PT: Title "Mais envolvente" / Desc "para utilizadores digitais")
 
 3) Ícone Globe2 — "Closer to real-world"
    Desc: "cognitive demands"
-   (PT: Title "Mais próximo do mundo real" / Desc "das exigências cognitivas")
 
 ANIMAÇÕES
 - Section header: FadeIn standard.

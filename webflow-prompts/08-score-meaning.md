@@ -12,10 +12,8 @@ LAYOUT
 
 SECTION HEADER
 - H2: "What Your IQ Score Means"
-  (PT: "O que significa a tua pontuação")
 - Subtitle:
   "IQ scores are interpreted relative to a reference population. IQbe uses a familiar scale where 100 represents the middle of the distribution."
-  (PT: "As pontuações de QI interpretam-se em relação a uma população de referência. O IQbe usa uma escala familiar em que 100 representa o centro da distribuição.")
 
 SCORE BANDS (mt 48px, max-width 800px centered, space-y 12px)
 
@@ -48,16 +46,8 @@ OS 5 BANDS:
 | 115–130    | Above average range         | 100       | #00E5FF (cyan)|
 | 130+       | High range                  | 100       | #FFB800 (gold)|
 
-(PT labels:
-- "Abaixo da média"
-- "Média, metade inferior"
-- "Média, metade superior"
-- "Acima da média"
-- "Excepcional")
-
 NOTA FINAL (mt 40px, centered, max-width 600px, 14px weight 500 #4A5578):
 "A score is not a complete portrait of a person's abilities, but it can offer a useful snapshot of reasoning and problem-solving performance."
-(PT: "Uma pontuação não é um retrato completo da pessoa, mas dá um snapshot útil do raciocínio e da resolução de problemas.")
 
 ANIMAÇÕES
 - Header: FadeIn standard.

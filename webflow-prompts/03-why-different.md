@@ -13,10 +13,8 @@ LAYOUT
 SECTION HEADER (componente partilhado, ver design system)
 - H2 (Plus Jakarta Sans 700, clamp 36px-52px, line-height 1.1, tracking -0.02em, cor #0A102E):
   "Why This IQ Intelligence Test Is Different"
-  (PT: "Porque é que este teste de QI é diferente")
 - Subtitle (18px weight 300 #4A5578, max-width 750px, centered):
   "Most online IQ tests only check whether you can recognize a static pattern. IQbe goes further — it is a dynamic brain test mental assessment measuring how well you manipulate information, plan your response, and solve visual problems under time pressure."
-  (PT: "A maioria dos testes de QI online só avalia se reconheces um padrão estático. O IQbe vai mais longe — é um brain test mental dinâmico que mede como manipulas informação, planeias a resposta e resolves problemas visuais sob pressão.")
 
 COMPARISON CARD (max-width 900px, mt 24px, centered)
 - Container: rounded 24px, border 1px rgba(0,102,255,0.10), overflow hidden.
@@ -56,7 +54,7 @@ Linha 5
 CTA TEXT LINK (centered, mt 40px)
 - Botão sem fundo, fonte 18px weight 700 #0066FF, hover #0A102E (color transition 300ms).
 - Texto + ícone ArrowRight (20px) com hover translateX +8px.
-- Texto: "Experience the difference" + ícone arrow (PT: "Experimenta a diferença").
+- Texto: "Experience the difference" + ícone arrow.
 
 ANIMAÇÕES
 - SectionHeader: FadeIn (y 40, opacity 0→1, 0.6s ease-out, viewport once).

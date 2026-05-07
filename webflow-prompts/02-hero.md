@@ -37,12 +37,11 @@ COLUNA ESQUERDA (texto + CTA + trust)
 3) SUBHEADLINE
 - 18-20px, weight 300 (light), cor #4A5578, line-height 1.6, max-width 480px.
 - Texto humanizado:
-  "Vai além de quizzes estáticos. O IQbe é uma avaliação de QI premium e brain test mental que mede a tua saúde cognitiva, raciocínio 3D e capacidade de resolução executiva — tudo numa só plataforma rápida e cientificamente validada."
-  (EN existente: "Go beyond static quizzes. IQbe is a premium IQ test and brain test mental assessment that measures your cognitive health, 3D thinking, and executive problem-solving in one fast, scientifically validated platform.")
+  "Go beyond static quizzes. IQbe is a premium IQ test and brain test mental assessment that measures your cognitive health, 3D thinking, and executive problem-solving in one fast, scientifically validated platform."
 
 4) CTA + REASSURANCE INLINE (flex row, gap 16px)
 - Botão primário pill — gradient #0066FF → #00A3FF, padding 20px 40px, fonte 18px weight 700, ícone arrow-right depois do texto.
-- Texto: "Check My IQ Score" → "Saber o meu QI"
+- Texto: "Check My IQ Score"
 - Hover: gradient escurece (from-#0055DD to-#0088DD) + -translateY 2px + shadow reforçada.
 - onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank").
 - Coluna ao lado: 2 linhas micro-text 13px weight 500 #4A5578:
@@ -98,7 +97,7 @@ Cada label: pill branco, padding 10px 20px, border 1px (cor varia), shadow 0 4px
 
 INDICADOR SCROLL (abaixo do conteúdo, centrado, bottom 32px)
 - Initial opacity 0, fade in 1s com 2s delay (após o conteúdo principal aparecer).
-- Texto 12px weight 700 uppercase tracking-widest cor #4A5578: "Scroll to explore" (ou PT: "Desliza para explorar").
+- Texto 12px weight 700 uppercase tracking-widest cor #4A5578: "Scroll to explore".
 - Ícone ChevronDown 20px #0066FF a saltar verticalmente: y 0 → 8px → 0, 1.5s ease-in-out infinite.
 
 ANIMAÇÕES DE ENTRADA (sequenciadas)

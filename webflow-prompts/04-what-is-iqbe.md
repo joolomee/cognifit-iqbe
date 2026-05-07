@@ -14,10 +14,8 @@ LAYOUT
 CABEÇALHO (left-aligned, max-width 800px, mb 48px)
 - H2 (Plus Jakarta Sans 700, clamp 36px-52px, leading-tight, tracking-tight, #0A102E, mb 24px):
   "What Is the IQbe Intelligence Test?"
-  (PT: "O que é o teste de inteligência IQbe?")
 - Body (18px weight 400 line-height 1.6 #4A5578):
   "IQbe is a digital, non-verbal IQ test designed to estimate fluid intelligence through interactive 3D problem solving. Inspired by Raven's Progressive Matrices, it does more than ask you to spot a pattern — it measures how you analyze, manipulate, and solve visual problems efficiently."
-  (PT: "O IQbe é um teste de QI digital, não-verbal, concebido para estimar a inteligência fluida através de resolução interactiva de problemas 3D. Inspirado nas Matrizes Progressivas de Raven, vai além de pedir para detectares um padrão — mede como analisas, manipulas e resolves problemas visuais com eficiência.")
 
 GRID FEATURES (mt 24px, mb 48px, grid 1/2/3 colunas mobile/tablet/desktop, gap 24px)
 
@@ -39,27 +37,21 @@ Os 6 cards:
 
 1) Ícone Brain — "Fluid intelligence"
    "Measures your ability to reason, detect patterns, and solve novel problems."
-   (PT: "Mede a tua capacidade de raciocinar, detectar padrões e resolver problemas novos.")
 
 2) Ícone Globe — "Non-verbal by design"
    "No language knowledge needed to take the test."
-   (PT: "Não precisas de saber qualquer língua para fazer o teste.")
 
 3) Ícone Hand — "Low cultural bias"
    "Suitable for broad international audiences and varied educational backgrounds."
-   (PT: "Adequado a audiências internacionais e a backgrounds educativos variados.")
 
 4) Ícone Box — "Interactive and manipulative"
    "Users rotate a 3D cube to locate missing pieces and infer the correct solution."
-   (PT: "Rodas um cubo 3D para localizar peças em falta e inferir a solução correcta.")
 
 5) Ícone Smartphone — "Digitally native"
    "Works online across desktop, tablet, and smartphone."
-   (PT: "Funciona online em desktop, tablet e smartphone.")
 
 6) Ícone Zap — "Beyond pattern recognition"
    "Adds visuospatial and executive demands that make the task more dynamic."
-   (PT: "Acrescenta exigências visuoespaciais e executivas que tornam a tarefa mais dinâmica.")
 
 QUOTE CARD DESTACADO (full-width do max, p 56-80px)
 - Card hover false, padding 40-56px, border-left 4px solid #0066FF.
@@ -70,7 +62,6 @@ QUOTE CARD DESTACADO (full-width do max, p 56-80px)
 <blockquote> texto:
 - Plus Jakarta Sans 500, italic, clamp 24-40px, line-height 1.2, #0A102E.
 - "IQbe measures not just whether you can see a pattern, but whether you can mentally manage and solve it."
-- (PT: "O IQbe não mede apenas se vês um padrão — mede se consegues geri-lo mentalmente e resolvê-lo.")
 
 ANIMAÇÕES
 - H2 + parágrafo: FadeIn delay 0s.

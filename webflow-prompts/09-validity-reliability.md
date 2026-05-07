@@ -17,10 +17,8 @@ PARTE A — VALIDITY
 
 SECTION HEADER A
 - H2: "Validity of the IQbe Test"
-  (PT: "Validade do teste IQbe")
 - Subtitle (max 750px centered):
   "IQbe was validated against Raven's Standard Progressive Matrices, one of the best-known non-verbal intelligence tests. In a lab study, IQbe scores showed a strong positive correlation with Raven-based IQ scores."
-  (PT: "O IQbe foi validado contra as Matrizes Progressivas Standard de Raven, um dos testes de inteligência não-verbais mais reconhecidos. Num estudo laboratorial, as pontuações do IQbe mostraram correlação positiva forte com as pontuações Raven.")
 
 GRID 3 STAT CARDS A (mt 48px, mb 48px, max-width 900px centered, grid 1/3 cols mobile/desktop, gap 24px)
 
@@ -72,10 +70,8 @@ PARTE B — RELIABILITY
 
 SECTION HEADER B
 - H2: "Reliability of the IQbe Test"
-  (PT: "Fiabilidade do teste IQbe")
 - Subtitle:
   "Reliability indicates whether a test produces stable and internally consistent results. IQbe showed adequate test-retest stability and internal consistency."
-  (PT: "A fiabilidade indica se um teste produz resultados estáveis e internamente consistentes. O IQbe demonstrou estabilidade test-retest adequada e consistência interna.")
 
 GRID 3 STAT CARDS B (mt 48px, mb 48px, max-width 900px centered, grid 1/3 cols, gap 24px)
 

@@ -63,15 +63,10 @@ SEO
 - Logo SVG inline para evitar request extra (mais rápido = melhor LCP).
 - Cada link âncora deve apontar para um <section id="..."> com a mesma id (deep linking + crawler).
 
-COPY (PT-PT humanizado, manter EN para alinhar com o ficheiro actual)
-- Idiomas: a página actual está em EN. Para versão PT, usar:
-  · "What is it?" → "O que é?"
-  · "Who is it for?" → "Para quem?"
-  · "Skills measured" → "Capacidades medidas"
-  · "How does it work?" → "Como funciona?"
-  · "Reliability" → "Fiabilidade"
-  · "Log In" → "Entrar"
-  · CTA: "Saber o meu QI" / "Começar teste"
+COPY (master language: EN)
+- Nav links (textos visíveis): "What is it?", "Who is it for?", "Skills measured", "How does it work?", "Reliability".
+- Log In: "Log In".
+- CTA: "Check My IQ Score" (desktop) / "Start Test" (mobile).
 ```
 
 ## Notas Webflow

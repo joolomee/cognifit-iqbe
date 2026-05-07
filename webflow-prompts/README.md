@@ -1,6 +1,6 @@
 # IQbe Webflow Prompts
 
-> Pacote modular de **16 prompts** para recriar a landing IQbe (CogniFit) no Webflow, com design fiel ao Figma Make actual, **fonte Plus Jakarta Sans** alinhada com `cognifit.com/longevity`, animações motion/react traduzidas para Webflow Interactions/GSAP, **SEO avançado** (JSON-LD, OG, hreflang, FAQPage) e copy humanizada PT-PT a manter as keywords originais.
+> Pacote modular de **16 prompts** para recriar a landing IQbe (CogniFit) no Webflow. Design fiel ao Figma Make actual. **Master language: EN** (alinhado com o produto vivo em `brain.cognifit.com/IQ-test`). Fonte Plus Jakarta Sans alinhada com `cognifit.com/longevity`. Animações motion/react traduzidas para Webflow Interactions/GSAP. **SEO avançado** com JSON-LD (Organization, WebApplication, FAQPage, HowTo, MedicalWebPage, BreadcrumbList).
 
 ## Como usar
 
@@ -106,7 +106,7 @@ Font           : 'Plus Jakarta Sans', 200-800
 
 ## Convenções de copy
 
-- **Línguas:** EN é a versão master (já no Figma Make). PT-PT incluído em cada prompt como variante humanizada. ES a derivar.
+- **Master language: EN.** Toda a copy nos prompts está em EN, alinhada com o site vivo. Versões PT-PT e ES podem ser derivadas em páginas separadas (com hreflang); não estão incluídas nestes prompts para manter foco no master.
 - **Keywords obrigatórias** (manter sempre):
   - CogniFit QI Assessment
   - IQ test / intelligence test

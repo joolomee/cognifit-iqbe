@@ -43,8 +43,9 @@ BLOCO HTML COMPLETO PARA <head>
 <meta property="og:image:alt" content="IQbe — Premium IQ Test by CogniFit. 3D cube reasoning task." />
 <meta property="og:site_name" content="CogniFit" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:locale:alternate" content="pt_PT" />
-<meta property="og:locale:alternate" content="es_ES" />
+<!-- Master language: EN. Mantém os alternates abaixo APENAS se publicares páginas PT/ES separadas. -->
+<!-- <meta property="og:locale:alternate" content="pt_PT" /> -->
+<!-- <meta property="og:locale:alternate" content="es_ES" /> -->
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -82,11 +83,11 @@ BLOCO HTML COMPLETO PARA <head>
 <!-- Fonts (Plus Jakarta Sans — alinhada com cognifit.com/longevity) -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<!-- hreflang (alinhar com URLs reais) -->
+<!-- hreflang — só EN por default. Descomenta as outras linhas SE publicares páginas PT/ES separadas. -->
 <link rel="alternate" hreflang="en" href="https://brain.cognifit.com/IQ-test" />
-<link rel="alternate" hreflang="pt-PT" href="https://brain.cognifit.com/pt/IQ-test" />
-<link rel="alternate" hreflang="es" href="https://brain.cognifit.com/es/IQ-test" />
 <link rel="alternate" hreflang="x-default" href="https://brain.cognifit.com/IQ-test" />
+<!-- <link rel="alternate" hreflang="pt-PT" href="https://brain.cognifit.com/pt/IQ-test" /> -->
+<!-- <link rel="alternate" hreflang="es" href="https://brain.cognifit.com/es/IQ-test" /> -->
 
 <!-- JSON-LD Organization -->
 <script type="application/ld+json">
@@ -107,7 +108,7 @@ BLOCO HTML COMPLETO PARA <head>
     "@type": "ContactPoint",
     "contactType": "customer support",
     "url": "https://support.cognifit.com/",
-    "availableLanguage": ["en", "es", "pt"]
+    "availableLanguage": ["en"]
   }]
 }
 </script>
@@ -348,6 +349,6 @@ NOTAS DE PERFORMANCE
 
 - Cola o bloco completo no campo "Inside <head> tag" da página.
 - Os scripts JSON-LD podem ir todos juntos no head, ou no Footer Code (Google aceita ambos).
-- Para hreflang, garante que cada locale aponta para a respectiva URL real (cria as páginas EN/PT/ES como cópias da master).
+- O master é EN. As linhas hreflang/og:locale:alternate para PT/ES estão comentadas; descomenta apenas se publicares essas variantes em páginas separadas no domínio.
 - O Title Tag e Meta Description já vão ser geridos pelo Webflow Page Settings — repetir aqui é opcional mas seguro.
 - Verifica em https://search.google.com/test/rich-results e https://validator.schema.org/ antes de publicar.

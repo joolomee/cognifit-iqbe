@@ -13,10 +13,8 @@ LAYOUT
 
 SECTION HEADER
 - H2: "What Cognitive Skills Does It Measure?"
-  (PT: "Que capacidades cognitivas avalia?")
 - Subtitle (centered max 750px):
   "IQbe is more than a standard IQ test. It is a comprehensive cognitive health and mental fitness evaluation that demands active manipulation, measuring processes that matter in real life."
-  (PT: "O IQbe é mais do que um teste de QI standard. É uma avaliação completa de saúde cognitiva e fitness mental que exige manipulação activa — mede processos que importam na vida real.")
 
 GRID (mt 64px, max-width 1000px centered, grid 1 col mobile / 2 col desktop, gap 24px)
 
@@ -35,19 +33,15 @@ Os 4 cards:
 
 1) Ícone Box (3D cube wireframe) — "Spatial Perception"
    Desc: "The core of our brain test mental assessment, measuring how you understand shapes, spatial structure, and visual rotation."
-   (PT: "O coração do nosso brain test: mede como entendes formas, estrutura espacial e rotação visual.")
 
 2) Ícone RotateCw (circular arrow) — "Working Memory"
    Desc: "A critical part of your IQ intelligence: the ability to temporarily hold, manipulate, and use visual information."
-   (PT: "Parte crítica do teu QI: a capacidade de reter, manipular e usar informação visual em tempo real.")
 
 3) Ícone CheckSquare — "Planning & Execution"
    Desc: "Beyond typical intelligence tests, IQbe measures executive functions and the mental flexibility required to solve novel problems."
-   (PT: "Além dos testes típicos, o IQbe mede funções executivas e a flexibilidade mental necessária a problemas novos.")
 
 4) Ícone BrainCircuit — "Abstract Reasoning"
    Desc: "Identify patterns and logical relationships to evaluate your overarching fluid intelligence."
-   (PT: "Identificar padrões e relações lógicas para avaliar a tua inteligência fluida geral.")
 
 ANIMAÇÕES
 - SectionHeader: FadeIn standard.

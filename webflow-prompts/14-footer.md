@@ -31,10 +31,8 @@ Flex column md:row, items-center, justify-between, gap 24-32px.
 ESQUERDA (max-width 36rem):
 - H3: 24-30px font-bold #FFFFFF mb 12px.
   "Want to keep improving your memory?"
-  (PT: "Queres continuar a treinar a memória?")
 - Body: 15px line-height 1.6 #CBD5E1 (slate-300).
   "Once you receive your IQ intelligence score, discover how CogniFit's personalized brain training can help you stimulate your cognitive abilities, memory, and executive function."
-  (PT: "Depois de saberes o teu QI, descobre como o treino personalizado CogniFit pode estimular memória, função executiva e cognição global.")
 
 DIREITA (CTA button):
 - Pill, padding 14px 32px, bg #0066FF (sólido), hover #0055DD, fonte 15px weight 700 #FFFFFF.

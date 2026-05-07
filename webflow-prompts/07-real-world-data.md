@@ -12,12 +12,10 @@ LAYOUT
 
 SECTION HEADER
 - H2: "Backed by Large-Scale Real-World Use"
-  (PT: "Sustentado por uso real em larga escala")
 - (sem subtitle no header, vai num parágrafo separado abaixo)
 
 PARÁGRAFO INTRO (centered, max-width 720px, mb 64px, 18px weight 400 line-height 1.6 #4A5578)
 "IQbe is not only grounded in cognitive science — it is also supported by extensive real-world usage. In an internal dataset collected over the last two years, 37,505 participants completed the test."
-(PT: "O IQbe não vive só em laboratório — é suportado por utilização real em larga escala. Num dataset interno recolhido nos últimos dois anos, 37.505 participantes completaram o teste.")
 
 LINHA DE STAT CARDS (overflow-x scroll mobile com snap-mandatory, gap 16px, mb 64px, hide-scrollbar)
 
@@ -33,11 +31,11 @@ Conteúdo de cada card:
 - Label: 12-13px uppercase tracking-wider weight 700 #4A5578.
 
 5 stats:
-1) "37,505" / "participants" (PT: "participantes")
-2) "16–90" / "age range" (PT: "idades")
-3) "102.43" / "average IQ" (PT: "QI médio")
-4) "100" / "median IQ" (PT: "QI mediano")
-5) "40–160" / "score range" (PT: "intervalo de pontuações")
+1) "37,505" / "participants"
+2) "16–90" / "age range"
+3) "102.43" / "average IQ"
+4) "100" / "median IQ"
+5) "40–160" / "score range"
 
 ANIMAÇÃO STAT CARDS
 - FadeIn delay i*0.1s.
@@ -45,7 +43,6 @@ ANIMAÇÃO STAT CARDS
 
 PARÁGRAFO TRANSITION (centered max-width 720px, mb 48px, 16px #4A5578):
 "The score distribution is broad and interpretable, with most users clustering between 85 and 115 and meaningful differentiation across higher and lower score ranges."
-(PT: "A distribuição é ampla e interpretável: a maior parte dos utilizadores cai entre 85 e 115, com diferenciação clara nos extremos.")
 
 BAR CHART (max-width 900px centered, dentro de um Card hover-false p 16-40px)
 - min-width 450px, height 280-350px (alt mobile ≈ 280px), overflow-x auto, hide-scrollbar.
