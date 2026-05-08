@@ -44,19 +44,15 @@ CTA BUTTON (centered, flex column sm:row gap 24px)
 - Texto: "Check My IQ Score" + ícone ArrowRight 20px ml 8px.
 - onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
 
-TRUST PILLS (mt 40px, flex wrap justify-center gap-x 24px gap-y 12px, 14px weight 700 #4A5578)
+TRUST INDICATORS (mt 40px, flex wrap justify-center gap-x 24px gap-y 12px, 14px weight 700 #4A5578) — SEM PILLS/RECTÂNGULOS
+3 itens em linha, só ícone + texto. Separados por dots 6px rgba(0,102,255,0.20):
 
-3 itens com separadores dot 6px rgba(0,102,255,0.20):
-
-1) Zap icon 16px #FFB800 + "Fast online assessment"
-
-2) (separador dot)
-
-3) CheckCircle 16px #00D4AA + "Non-verbal"
-
-4) (separador dot)
-
-5) Mini badge custom 16px (w-4 h-4 gradient bg #0066FF→#00E5FF, rounded full, shadow 0 2px 5px rgba(0,102,255,0.30), centered ✓ branco 10px) + "Scientifically grounded"
+1) Zap icon (lucide) 16px #FFB800 + "Fast online assessment"
+2) (separador dot 6px)
+3) CheckCircle (lucide) 16px #00D4AA + "Non-verbal"
+4) (separador dot 6px)
+5) BadgeCheck (lucide) 16px #0066FF + "Scientifically grounded"
+   (substituiu o antigo mini-badge custom em rounded full — agora é só o ícone, sem container.)
 
 ANIMAÇÕES
 - H2: FadeIn standard (entrada y 40 → 0).

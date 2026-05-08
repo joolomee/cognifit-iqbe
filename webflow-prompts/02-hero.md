@@ -21,12 +21,11 @@ GLOW DE FUNDO (decorativo, atrás do grid)
 flex column items-start, space-y 32px (8 em escala Tailwind), mt 48px mobile / 0 desktop.
 Bloco principal envolto em FadeIn (delay 0).
 
-1) BADGE PILL EYEBROW
-- inline-flex items-center, gap 8px, padding 6px 12px, rounded-full.
-- bg rgba(255,255,255,0.60), border 1px rgba(0,102,255,0.10), shadow-sm.
+1) EYEBROW (sem rectângulo — só inline)
+- inline-flex items-center, gap 8px. SEM background, SEM border, SEM rounded, SEM shadow.
 - Cor #0066FF, 12px weight 600 (semibold), uppercase, tracking-widest (0.1em).
 - mb 24px.
-- Conteúdo: dot 8x8 com `animate-ping` Tailwind nativo (scale 1→2.25 + opacity 1→0, 1s cubic-bezier(0,0,0.2,1) infinite) sobre dot fixo 8x8 #0066FF.
+- Conteúdo: dot 8x8 com `animate-ping` Tailwind nativo (scale 1→2.25 + opacity 1→0, 1s infinite) sobre dot fixo 8x8 #0066FF.
 - Texto: "CogniFit QI Assessment".
 
 2) H1
@@ -56,11 +55,16 @@ Bloco principal envolto em FadeIn (delay 0).
   · Linha 2 (mt 4px): <CheckCircle> 14x14 #00D4AA + "Scientifically Validated"
 
 5) TRUST STRIP — bloco separado dentro de FadeIn delay 0.2s, w-full
-- pt 32px, mt 16px, border-top 1px rgba(0,102,255,0.10).
+- pt 32px, mt 16px, border-top 1px rgba(0,102,255,0.10) (hairline divider, único frame permitido aqui).
 - flex flex-wrap items-center, gap-x 24px, gap-y 12px.
-- Item 1: <Shield> lucide 16x16 mr 8px #0066FF + "37,505+ Datasets" — 14px weight 600 (semibold) #4A5578.
-- Separador: dot 4x4 (w-1 h-1) rounded-full bg rgba(0,102,255,0.30); só visível em sm+ (`hidden sm:block`).
-- Item 2: <Brain> lucide 16x16 mr 8px #0066FF + "Raven's Matrices Based" — 14px weight 600 #4A5578.
+- ⚠ "37,505+ Datasets" REMOVIDO (claim não justificável sem auditoria interna ao dataset). Substitui por uma das opções abaixo (escolher só claims defensáveis):
+  · "Validated against Raven's SPM" (com <BadgeCheck> 16x16 #0066FF) — defensável se houver paper interno.
+  · "Non-verbal · Cross-cultural" (com <Globe> 16x16 #0066FF) — descritivo factual, sempre defensável.
+  · "Built with neuroscientists" (com <Brain> 16x16 #0066FF) — defensável se a equipa científica for pública.
+  · ou DEIXAR APENAS o item 2 e remover o item 1 (preferível se nada for verificável).
+- Separador: dot 4x4 rounded-full bg rgba(0,102,255,0.30); só visível em sm+; usar APENAS se houver 2 items.
+- Item 2: <MapPin> lucide 16x16 mr 8px #0066FF + "Raven's Matrices Based" — 14px weight 600 #4A5578.
+  (NB: na screenshot vê-se MapPin; o código fonte tinha Brain — alinha com o Figma actual.)
 
 ══════ COLUNA DIREITA — Visual ══════
 FadeIn delay 0.3s, direction "left" (entra com x-40 → x-0).
@@ -112,28 +116,27 @@ HAND HINT (visível até 1ª interacção)
   · duration 2.5s, repeat Infinity, repeatDelay 0.5s, ease "easeInOut"
 - Esconder ao primeiro pointerDown ou drag (`hasInteracted` true).
 
-══════ 3 FLOATING LABELS (à volta do cubo) ══════
-Cada label é uma pill branca absolute, z 20, pointer-events none, will-change-transform.
-Style partilhado: bg #FFFFFF, padding 16x8 mobile / 20x10 md+ (px-4 md:px-5 py-2 md:py-2.5), rounded-full, whitespace-nowrap.
-Texto: 12px mobile / 14px md+, weight 700 (font-bold), tracking-wide, cor #0A102E (TODOS OS LABELS).
-Cor dinâmica está APENAS na border, na shadow e no dot.
+══════ 3 FLOATING LABELS (à volta do cubo) — SEM RECTÂNGULO ══════
+Cada label é só dot + texto inline, absolute, z 20, pointer-events none, will-change-transform.
+SEM bg, SEM border, SEM rounded-full, SEM shadow.
+Estrutura: inline-flex items-center, gap 8px.
+Texto 12px mobile / 14px md+, weight 700 (font-bold), tracking-wide, cor #0A102E (todos os labels).
+Para legibilidade sobre fundo claro/glow, opcional: text-shadow 0 1px 2px rgba(255,255,255,0.6) — aplicado APENAS no texto, não num container.
+Dot 8x8 rounded-full (única forma circular — é o dot, não um wrapper).
 
 LABEL 1 — "3D Reasoning"
 - Posição: absolute top 5% / 20% md+, left 0% / -5% md+.
-- Border 1px rgba(0,102,255,0.10) (BLUE), shadow 0 4px 15px rgba(0,102,255,0.08) (BLUE).
-- Dot 8x8 rounded-full bg #00E5FF (cyan) + box-shadow 0 0 10px #00E5FF + Tailwind `animate-pulse`.
-- Animação: motion y [-4, 4, -4], duration 5s, repeat Infinity, ease "easeInOut", delay 0.2s.
+- Dot 8x8 bg #00E5FF (cyan) + box-shadow 0 0 10px #00E5FF + Tailwind `animate-pulse`.
+- Animação container: motion y [-4, 4, -4], duration 5s, repeat Infinity, ease "easeInOut", delay 0.2s.
 
 LABEL 2 — "Executive Function"
 - Posição: absolute top 10% / 5% md+, right 0% / 5% md+ (md:bottom-auto).
-- Border 1px rgba(123,97,255,0.10) (VIOLET), shadow 0 4px 15px rgba(123,97,255,0.08) (VIOLET).
-- Dot 8x8 rounded-full bg #7B61FF (sem glow, sem animate-pulse).
+- Dot 8x8 bg #7B61FF (violet, sem glow, sem animate-pulse).
 - Animação: motion y [-5, 5, -5], duration 6s, ease "easeInOut", delay 1s.
 
 LABEL 3 — "Fluid Intelligence"
 - Posição: absolute bottom 5% / 10% md+, left 0% / -15% md+ (md:top-auto, md:right-auto).
-- Border 1px rgba(0,212,170,0.10) (TEAL), shadow 0 4px 15px rgba(0,212,170,0.08) (TEAL).
-- Dot 8x8 rounded-full bg #00D4AA (sem glow, sem animate-pulse).
+- Dot 8x8 bg #00D4AA (teal, sem glow, sem animate-pulse).
 - Animação: motion y [4, -4, 4], duration 4.5s, ease "easeInOut", delay 1.5s.
 
 ══════ INDICADOR SCROLL (rodapé do hero, fora do grid) ══════

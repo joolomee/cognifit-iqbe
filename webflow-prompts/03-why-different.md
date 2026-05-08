@@ -16,24 +16,23 @@ SECTION HEADER (componente partilhado, ver design system)
 - Subtitle (18px weight 300 #4A5578, max-width 750px, centered):
   "Most online IQ tests only check whether you can recognize a static pattern. IQbe goes further — it is a dynamic brain test mental assessment measuring how well you manipulate information, plan your response, and solve visual problems under time pressure."
 
-COMPARISON CARD (max-width 900px, mt 24px, centered)
-- Container: rounded 24px, border 1px rgba(0,102,255,0.10), overflow hidden.
-- Hover (no container inteiro): translateY -5px + box-shadow 0 20px 40px -10px rgba(0,102,255,0.15) (300ms).
+COMPARISON GRID (max-width 900px, mt 24px, centered) — SEM RECTÂNGULO
+- Container: SEM rounded, SEM border, SEM bg, SEM hover-lift do container.
+- Apenas grid 2 colunas com hairlines 1px (linhas separadoras) entre rows e entre as 2 columns.
 
-CABEÇALHO DA TABELA (grid 2 colunas, bg rgba(255,255,255,0.40), border-bottom 1px rgba(0,102,255,0.10))
-- Coluna 1: padding 24px, uppercase tracking-wider 12px weight 700 #0A102E:
-  "TRADITIONAL TESTS"
-- Coluna 2: padding 24px, border-left 1px rgba(0,102,255,0.10), bg rgba(255,255,255,0.60), uppercase 12px #0066FF:
-  Ícone Zap (16px #0066FF, animate-pulse) + texto "IQbe EXPERIENCE"
+CABEÇALHO (grid 2 colunas, hairline inferior 1px rgba(0,102,255,0.10))
+- Coluna 1: padding 24px, uppercase tracking-wider 12px weight 700 #0A102E: "TRADITIONAL TESTS"
+- Coluna 2: padding 24px, hairline esquerda 1px rgba(0,102,255,0.10), uppercase 12px #0066FF:
+  Ícone Zap (16px #0066FF, animate-pulse) + "IQbe EXPERIENCE"
 
-LINHAS (5 linhas, divididas por border-top 1px rgba(0,102,255,0.05))
-Cada linha: grid 2 colunas, group hover background rgba(255,255,255,0.50).
+LINHAS (5 linhas, separadas por hairlines 1px rgba(0,102,255,0.05) horizontais)
+Cada linha: grid 2 colunas. SEM hover bg. Hover (opcional): cor do texto IQbe shifta levemente.
 
 Linha 1
-- Esquerda: padding 24px, text 15px #4A5578 vertical-center: "Static 2D patterns"
-- Direita: padding 24px, border-left 1px rgba(0,102,255,0.05), bg rgba(0,102,255,0.02), flex gap 12px:
+- Esquerda: padding 24px, 15px #4A5578 vertical-center: "Static 2D patterns"
+- Direita: padding 24px, hairline esquerda 1px rgba(0,102,255,0.05), flex gap 12px:
   · CheckCircle 20px #0066FF, group-hover scale(1.10) rotate(12deg) 300ms.
-  · Texto 15px weight 500 #0A102E line-height 1.6: "Interactive 3D cube challenges"
+  · 15px weight 500 #0A102E line-height 1.6: "Interactive 3D cube challenges"
 
 Linha 2
 - Esquerda: "Passive recognition"

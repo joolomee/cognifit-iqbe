@@ -10,6 +10,9 @@ Cria a SECÇÃO "Backed by Large-Scale Real-World Use" — credibilidade com dad
 LAYOUT
 - max-width 1200px, padding 40-64px vertical, padding lateral 24px.
 
+⚠ JUSTIFIABILITY NOTICE
+Toda esta secção depende de um dataset interno (37,505 participantes; idades 16–90; média/mediana de QI; distribuição). Antes de publicar, confirmar com a equipa científica/produto que estes números são VERIFICÁVEIS num documento interno (auditoria, paper, dataset audit). Se não houver evidência → REMOVER a secção inteira. Não suavizar com "estimated" ou "approximately".
+
 SECTION HEADER
 - H2: "Backed by Large-Scale Real-World Use"
 - (sem subtitle no header, vai num parágrafo separado abaixo)
@@ -17,13 +20,14 @@ SECTION HEADER
 PARÁGRAFO INTRO (centered, max-width 720px, mb 64px, 18px weight 400 line-height 1.6 #4A5578)
 "IQbe is not only grounded in cognitive science — it is also supported by extensive real-world usage. In an internal dataset collected over the last two years, 37,505 participants completed the test."
 
-LINHA DE STAT CARDS (overflow-x scroll mobile com snap-mandatory, gap 16px, mb 64px, hide-scrollbar)
+LINHA DE STAT BLOCKS (overflow-x scroll mobile com snap-mandatory, gap 16px, mb 64px, hide-scrollbar) — SEM CARD/RECTÂNGULO
 
-5 cards. Cada um:
+5 stat blocks. Cada um:
 - min-width 180px, flex 1, snap-center.
-- Card style hover false (sem lift).
+- SEM rounded, SEM border, SEM bg, SEM shadow.
 - Padding 24px, text-center, flex column items-center justify-center.
-- Border-top 2px #0066FF.
+- Accent line top 2px #0066FF (linha horizontal acima do número, como underline invertida — não fecha caixa).
+- Opcional: hairlines 1px verticais rgba(0,102,255,0.10) entre stat blocks em desktop (separar sem caixa).
 
 Conteúdo de cada card:
 - Valor: gradient text linear-gradient(90deg, #0066FF, #00E5FF), 32-40px font-extrabold (weight 800), line-height 1.2, mb 8px, whitespace-nowrap.
@@ -44,7 +48,8 @@ ANIMAÇÃO STAT CARDS
 PARÁGRAFO TRANSITION (centered max-width 720px, mb 48px, 16px #4A5578):
 "The score distribution is broad and interpretable, with most users clustering between 85 and 115 and meaningful differentiation across higher and lower score ranges."
 
-BAR CHART (max-width 900px centered, dentro de um Card hover-false p 16-40px)
+BAR CHART (max-width 900px centered) — SEM CARD/RECTÂNGULO
+- SEM rounded, SEM border, SEM bg de container. Apenas o chart inline com padding vertical 16-40px para respiração.
 - min-width 450px, height 280-350px (alt mobile ≈ 280px), overflow-x auto, hide-scrollbar.
 - Container interno: flex items-end justify-between gap 6-12px, padding 24-40px top, 24px bottom.
 

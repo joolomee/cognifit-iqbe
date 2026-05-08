@@ -28,11 +28,10 @@ GRID DE PASSOS (z-index 10, 1 col mobile / 3 col desktop, gap 40px)
 Cada passo (FadeIn com delay i*0.15s, items center, text-center, group hover):
 
 1) ICON TILE
-- 80x80px, rounded 16px, background #FFFFFF, border 1px rgba(0,102,255,0.20).
-- Box-shadow 0 8px 30px rgba(0,102,255,0.08).
-- Padding center; emoji 32px (ou ícone Phosphor 32px gradient #0066FF→#00A3FF stroke).
-- Hover: rotate sequence [0,-10,10,-5,5,0] + scale 1.10 (300ms).
-- z-index 10 acima da linha.
+- SEM tile/rectângulo. Apenas o ícone à vista, 48-56px (lucide), gradient stroke #0066FF→#00A3FF.
+- SEM background, SEM border, SEM rounded, SEM shadow.
+- Hover: rotate sequence [0,-10,10,-5,5,0] + scale 1.10 (300ms) directamente no ícone.
+- z-index 10 acima da linha conectora.
 
 2) STEP LABEL
 - mt 24px, 12px uppercase tracking-widest weight 700 #0066FF.

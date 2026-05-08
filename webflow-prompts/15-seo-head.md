@@ -173,18 +173,15 @@ BLOCO HTML COMPLETO PARA <head>
     "Working Memory Assessment",
     "Abstract Reasoning",
     "Raven's Standard Progressive Matrices Based",
-    "Validated against Raven (r = 0.613, p < .001)",
-    "Test-retest reliability 0.71",
-    "Cronbach's alpha 0.775",
     "Detailed PDF Report"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "37505",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
+  ]
+  /* ⚠ JUSTIFIABILITY:
+     - Removido featureList items "Validated against Raven (r = 0.613, p < .001)",
+       "Test-retest reliability 0.71", "Cronbach's alpha 0.775" — só re-incluir
+       quando os valores estiverem auditados com paper/whitepaper público.
+     - Removido aggregateRating (4.8/5 com 37505 reviews) — não é justificável sem
+       fonte oficial (App Store/Play Store/Trustpilot). Se vier a haver, voltar a
+       declarar com a fonte real. */
 }
 </script>
 

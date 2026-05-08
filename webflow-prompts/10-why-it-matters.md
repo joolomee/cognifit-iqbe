@@ -18,14 +18,13 @@ SECTION HEADER
 GRID (mt 48px, max-width 1000px centered, grid 1/3 cols mobile/desktop, gap 24px)
 
 3 cards centered (text-center). Cada um:
-- Card style padding 32px h-full, flex column items-center.
-- Hover: translateY -8px scale 1.02 (spring 300).
-- Group-hover trigger no ícone container.
+- SEM rounded, SEM border, SEM bg, SEM shadow no bloco. Padding interno 32px h-full, flex column items-center.
+- Hover: translateY -4px (spring 300). Sem mudar bg.
+- Hairlines 1px verticais rgba(0,102,255,0.10) entre os 3 blocks (em desktop, opcional).
 
-ÍCONE CONTAINER
-- Padding 20px (p-5), rounded full (não quadrado), inline-flex, mb 24px.
-- bg rgba(0,102,255,0.10) idle → bg #0066FF group-hover (300ms transition colors).
-- Ícone 32px (w-8 h-8): cor #0066FF idle → cor #FFFFFF group-hover.
+ÍCONE (sem container/box)
+- 40-48px (w-10 h-10 / w-12 h-12), cor #0066FF idle. SEM padding-box, SEM rounded, SEM bg.
+- Group hover: cor pode shiftar para #00A3FF + scale 1.08.
 - Microanimação infinita do ícone (varia por card):
   · Card 0: rotate [0,15,-15,0], 2.5s ease-in-out infinite.
   · Card 1: scale [1, 1.1, 1], 2.5s.

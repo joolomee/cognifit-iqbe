@@ -14,13 +14,15 @@ SECTION HEADER
 - H2: "Frequently Asked Questions"
 - (sem subtitle)
 
-ACCORDION LIST (max-width 720px centered, space-y 16px)
+ACCORDION LIST (max-width 720px centered) — SEM CARD em volta de cada item
 
-Cada accordion item: card hover false, mb 16px, overflow hidden, border-left 4px solid transition colors 300ms.
-- Idle: border-left transparent, bg rgba(255,255,255,0.60), hover bg rgba(255,255,255,0.80).
-- Open: border-left #0066FF, bg rgba(255,255,255,0.90), shadow md.
+Cada accordion item: SEM rounded, SEM border, SEM bg no container do item.
+- Apenas hairline 1px rgba(0,102,255,0.10) horizontal acima de cada item (separador entre Qs).
+- Open state: accent line 4px à esquerda do TÍTULO em #0066FF (linha vertical decorativa, não caixa).
 
-Botão toggle: w-full text-left, p 24px, flex justify-between items-center, focus outline-none.
+Botão toggle (este SIM tem leve hover state, é um elemento interactivo):
+- w-full text-left, p 24px, flex justify-between items-center, focus outline 3px #7B61FF outline-offset 3px.
+- Hover: cor do title shifta para #0066FF.
 - Title (esquerda): Plus Jakarta Sans 700, 18px, #0A102E.
 - Chevron (direita): ChevronDown 20px #0066FF, rotate 0 idle / 180 open (300ms).
 

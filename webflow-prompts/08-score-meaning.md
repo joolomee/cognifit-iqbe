@@ -17,10 +17,11 @@ SECTION HEADER
 
 SCORE BANDS (mt 48px, max-width 800px centered, space-y 12px)
 
-5 rows. Cada uma:
-- flex items-center, rounded 16px, bg #FFFFFF, border 1px rgba(0,102,255,0.10), overflow hidden, position relative.
-- Hover: bg #F8FAFC, border rgba(0,102,255,0.20), scale 1.01, shadow 0 4px 12px rgba(0,0,0,0.05) (300ms).
-- Group on hover: cor do label muda para #0066FF.
+5 rows. SEM RECTÂNGULO em volta do row.
+- flex items-center, position relative.
+- SEM rounded, SEM border, SEM bg, SEM shadow no container do row.
+- Hairlines 1px rgba(0,102,255,0.10) horizontais entre rows.
+- Hover: scale 1.005 + cor do label muda para #0066FF (300ms). Sem alterar bg.
 
 ESTRUTURA DE UMA ROW
 

@@ -23,10 +23,10 @@ CONTAINER (max-width 1200px centered, padding 24px, position relative z-10)
 TOP BANNER — "Want to keep improving your memory?" 
 ═══════════════════════════════════════
 
-mb 48-64px, padding 24-48px, rounded 16px.
-Background: linear-gradient(90deg, rgba(0,102,255,0.20), transparent).
-Border 1px rgba(0,102,255,0.30).
-Flex column md:row, items-center, justify-between, gap 24-32px.
+mb 48-64px, padding 24-48px. SEM rounded, SEM border, SEM bg-block.
+- Hairline divider opcional 1px rgba(0,102,255,0.20) acima e abaixo do banner (separar visualmente do resto do footer SEM encerrar em caixa).
+- Glow ambient (decorativo, não conta como caixa): radial-gradient(circle at left center, rgba(0,102,255,0.10), transparent 70%) atrás do bloco.
+- Flex column md:row, items-center, justify-between, gap 24-32px.
 
 ESQUERDA (max-width 36rem):
 - H3: 24-30px font-bold #FFFFFF mb 12px.

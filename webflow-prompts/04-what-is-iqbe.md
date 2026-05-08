@@ -19,13 +19,14 @@ CABEÇALHO (left-aligned, max-width 800px, mb 48px)
 
 GRID FEATURES (mt 24px, mb 48px, grid 1/2/3 colunas mobile/tablet/desktop, gap 24px)
 
-6 cards, cada um:
-- Card style do design system (rounded 24px, bg rgba(255,255,255,0.80), border 1px rgba(0,102,255,0.10), shadow 0 4px 20px rgba(0,102,255,0.03)).
-- Padding 32px, h-full, flex column items-start gap 20px.
-- Hover: translateY -8px + scale 1.02 (spring stiffness 300, damping 20).
-- Group hover: ícone container muda fundo de rgba(0,102,255,0.10)/cor #0066FF para fundo #0066FF/cor #FFFFFF (transition colors 300ms).
+6 feature blocks. SEM CARD/RECTÂNGULO:
+- SEM rounded, SEM border, SEM bg, SEM shadow no bloco.
+- Padding interno 16-24px (respiração), h-full, flex column items-start gap 20px.
+- Hover: translateY -4px (spring 300/20). Sem alterar bg/border (já não existem).
+- Hairlines 1px rgba(0,102,255,0.10) entre blocos da grid (linhas verticais entre cols + horizontais entre rows).
 
-Ícone container: 16px padding, rounded 16px, bg rgba(0,102,255,0.10), shadow-sm, ícone 24px #0066FF.
+Ícone (sem container): 32-40px, cor #0066FF idle. SEM padding-box, SEM rounded, SEM bg, SEM shadow.
+Group hover: ícone scale 1.08 + cor pode shiftar para #00A3FF.
 Microanimação infinita do ícone (alterna entre cards):
 - Cards 0/2/4 (par): rotate [0,10,-10,0] em 3s ease-in-out infinite.
 - Cards 1/3/5 (ímpar): translateY [0,-3,0] em 3s ease-in-out infinite.
@@ -53,11 +54,11 @@ Os 6 cards:
 6) Ícone Zap — "Beyond pattern recognition"
    "Adds visuospatial and executive demands that make the task more dynamic."
 
-QUOTE CARD DESTACADO (full-width do max, p 56-80px)
-- Card hover false, padding 40-56px, border-left 4px solid #0066FF.
-- Background: linear-gradient(90deg, rgba(0,102,255,0.05) 0%, transparent 100%).
-- Decoração: orb absoluta -right -80px -top -80px, 256x256, bg rgba(0,102,255,0.05), border-radius full, blur 50px.
-- Hover: scale 1.01 (spring stiffness 400, damping 25).
+QUOTE BLOCK DESTACADO (full-width, padding 40-56px) — SEM RECTÂNGULO
+- SEM rounded, SEM border, SEM bg.
+- Apenas accent line 4px solid #0066FF à esquerda (border-left, é uma linha vertical).
+- Decoração ambient (não conta como rectângulo): orb absolute -right -80px -top -80px, 256x256, bg rgba(0,102,255,0.05), rounded full, blur 50px, pointer-events none.
+- SEM hover scale.
 
 <blockquote> texto:
 - Plus Jakarta Sans 500, italic, clamp 24-40px, line-height 1.2, #0A102E.

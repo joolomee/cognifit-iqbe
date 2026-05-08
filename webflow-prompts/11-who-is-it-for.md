@@ -10,9 +10,9 @@ Cria a SECÇÃO "Who Is the IQbe Intelligence Test Aimed At?" — segmentação 
 LAYOUT
 - <section id="who-is-it-for" scroll-mt 96px>.
 - max-width 1200px, padding 48-80px vertical, padding lateral 24px.
-- Background: rgba(0,102,255,0.02), border-radius 48px (rounded-[3rem]).
-- Margin top 32px, margin bottom 32px (separação visual).
-- position relative, overflow hidden.
+- SEM background tinted, SEM rounded — secção é só um <section> normal sem moldura.
+- Apenas dividers globais (de 00) acima e abaixo separam visualmente do que vem antes/depois.
+- position relative, overflow hidden (para os orbs ambient).
 
 DECORAÇÃO AMBIENT (absolute, pointer-events none)
 
@@ -35,24 +35,20 @@ SECTION HEADER
 
 GRID (mt 48px, max-width 1000px centered, grid 1/2/3 cols mobile/tablet/desktop, gap 24px)
 
-5 cards. Cada um:
-- Card hover false, padding 32px h-full.
-- bg rgba(255,255,255,0.80) backdrop-blur-sm.
-- border 1px rgba(0,102,255,0.10) → hover rgba(0,102,255,0.30) (transition 300ms).
-- Hover: translateY -6px (spring 300).
+5 audience blocks. SEM CARD/RECTÂNGULO:
+- SEM rounded, SEM border, SEM bg, SEM shadow no bloco. Padding interno 24-32px h-full.
+- Hover: translateY -4px (spring 300). Sem mudar bg/border (já não existem).
+- Hairlines 1px rgba(0,102,255,0.10) entre rows e cols da grid (separação visual sem encerrar).
 - Group cursor-default.
 
 Layout especial nos cards 4 e 5 (em desktop ≥1024px):
 - Card 4 (i=3): col-start 1.
 - Card 5 (i=4): col-start 2 col-span 2 (ocupa 2 colunas para preencher visualmente).
 
-ÍCONE CONTAINER
-- 48x48 (w-12 h-12), flex center, rounded 12px.
-- background: linear-gradient(135deg, rgba(0,102,255,0.10), rgba(0,229,255,0.10)).
-- color #0066FF, mb 20px.
-- Group hover: scale 1.10 + rotate 6deg (300ms).
-- Box-shadow: 0 4px 15px rgba(0,102,255,0.05).
-- Ícone 24px (w-6 h-6).
+ÍCONE (sem container/box)
+- 32-40px (w-8 h-8 / w-10 h-10), cor #0066FF idle. SEM padding-box, SEM rounded, SEM bg, SEM shadow.
+- Group hover: scale 1.10 + rotate 6deg + cor pode shiftar #00A3FF (300ms).
+- Mb 20px.
 
 H3 título Plus Jakarta Sans 700, 20px, #0A102E, mb 12px.
 Description 15px weight 400 line-height 1.6 #4A5578.

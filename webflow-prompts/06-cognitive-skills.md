@@ -18,13 +18,14 @@ SECTION HEADER
 
 GRID (mt 64px, max-width 1000px centered, grid 1 col mobile / 2 col desktop, gap 24px)
 
-4 cards. Cada um:
-- Card style (rounded 24px, bg rgba(255,255,255,0.80), border 1px rgba(0,102,255,0.10), shadow 0 4px 20px rgba(0,102,255,0.03)).
-- Padding 32px, h-full, flex column items-start text-left.
-- Border-left 4px transparent → hover #0066FF (transition all 300ms).
-- Hover: translateY -8px, scale 1.02 (spring stiffness 300).
+4 skill blocks. SEM CARD/RECTÂNGULO:
+- SEM rounded, SEM border, SEM bg, SEM shadow no bloco.
+- Padding interno 16-24px (respiração), h-full, flex column items-start text-left.
+- Accent line 4px à esquerda (border-left, linha vertical): idle transparent → hover #0066FF (300ms). É linha, não caixa.
+- Hover: translateY -4px, scale 1.02 (spring 300). Sem mudar bg.
+- Hairlines 1px rgba(0,102,255,0.10) entre rows da grid (separar visualmente sem encerrar cada bloco).
 
-ÍCONE container: 16px padding, rounded 12px, bg rgba(0,102,255,0.10), inline-flex; ícone 32px #0066FF.
+ÍCONE (sem container): 32-40px (w-10 h-10), cor #0066FF idle. SEM padding-box, SEM rounded, SEM bg, SEM shadow.
 
 H3 título: Plus Jakarta Sans 700, 20px, #0A102E, mt 24px mb 12px.
 Description: 16px weight 400 line-height 1.6 #4A5578.

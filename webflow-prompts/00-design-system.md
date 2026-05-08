@@ -61,19 +61,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 ```
 
+## Regra de informação justificável (GLOBAL)
+
+**Toda a copy com claims, números, percentagens, estatísticas, ratings ou metodologia tem de estar suportada por evidência interna ou pública verificável.** Não inventar números nem citar valores que não existem em estudo, dataset ou comunicação oficial CogniFit.
+
+Antes de publicar qualquer prompt/secção, validar:
+- **Stats numéricos** — datasets, participantes, idades, médias, ranges, distribuições — só usar se houver auditoria interna ou paper publicado. Caso contrário, marcar como `[REPLACE: claim verificável]` e remover antes de live.
+- **Correlações, p-values, alpha de Cronbach, test-retest** — só usar com referência ao estudo (DOI ou link interno do whitepaper).
+- **Ratings agregados** (★ 4.x/5, "X+ reviews") — só usar com fonte (App Store, Google Play, Trustpilot). Sem fonte → remover.
+- **Comparativos com concorrência** — só fazer claims que sejam factuais e verificáveis.
+- **Aprovações regulatórias / certificações** — usar apenas se existirem.
+- **"Cientificamente validado"** — sustentar com paper(s) peer-reviewed na secção Validity ou no whitepaper.
+
+Se um claim **não pode ser justificado**, deve ser **removido** (não suavizado, não reescrito de forma vaga). É preferível espaço em branco a copy não-defensável (regulatório + GEO/AEO + reputação).
+
+## Regra de framing (GLOBAL — APLICA-SE A TODAS AS SECÇÕES)
+
+**Apenas elementos clicáveis (buttons, toggles, links-pill com acção, social icons) podem ter rectângulo visível** — ou seja, combinação de `background` + `border` + `border-radius`.
+
+Tudo o resto — eyebrows, badges informativos, floating labels, feature blocks, stat blocks, score rows, FAQ items, audience blocks, testemunhos, comparison cells, quote blocks, banner blocks — **não tem rectângulo**. Para organizar o conteúdo usa apenas:
+
+- **Espaçamento** (padding interno, margins, gaps de grid).
+- **Hierarquia tipográfica** (font-size, weight, cor, tracking).
+- **Dividers 1px** (`hairline`) entre items, com gradient ou cor sólida `var(--border-subtle)`.
+- **Accent lines** (4-8px verticais à esquerda, ou 2px horizontais no topo) onde for útil para destacar — mas como linha, não como caixa fechada.
+- **Hover lift / opacity / colour shift** continuam permitidos como micro-interacção; não introduzem moldura.
+
+Nunca aplicar `border + bg + rounded` em conjunto a um elemento puramente informativo. Não envolver títulos/parágrafos/listagens em "cards" decorativos. Mantém o site editorial, arejado e direccionado pelo grid.
+
+Buttons que MANTÊM rectângulo: CTA pill primário (Hero, Final CTA, Header, Footer banner), Scroll-to-top, hamburger toggle (mobile), accordion toggle (apenas o botão do header de cada item — não o container do item), App Store / Google Play badges (links externos), social icons (round full counta como rectângulo circular).
+
 ## Componentes-base
 
-### Card (`.iqbe-card`)
-- `background: rgba(255,255,255,0.80); border: 1px solid var(--border-subtle); border-radius: 24px; box-shadow: var(--shadow-card); overflow: hidden; position: relative;`
-- Glare top: pseudo-elemento `::before` com `1px` altura, gradient horizontal `transparent → white → transparent`.
-- Hover: `transform: translateY(-6px); background: #FFFFFF; box-shadow: var(--shadow-card-hover); border-color: var(--border-hover);` — transição `300ms ease`.
-
-### Button primário (`.iqbe-btn`)
+### Button primário (`.iqbe-btn`) — único componente com frame
 - Pill: `border-radius: 999px; padding: 16px 32px; font-weight: 700; color: white;`
 - Background: `linear-gradient(135deg, #0066FF 0%, #00E5FF 100%)`
 - Shadow: `0 8px 20px rgba(0,102,255,0.25)`
 - Hover: `scale(1.03); box-shadow: 0 10px 25px rgba(0,229,255,0.35);`
 - Inner highlight on hover: pseudo-elemento branco a 10% opacity.
+
+### Content block (substitui o antigo `.iqbe-card`)
+Para qualquer bloco informativo (feature, stat, testemunho, audience, etc.):
+- **Sem** `background`, **sem** `border`, **sem** `border-radius`, **sem** `box-shadow` no container.
+- Apenas `padding` (24-32px) para respirar e `gap` interno entre elementos.
+- Hover (opcional): `transform: translateY(-4px); transition: 300ms ease;` — sem mudar bg/border (já não existem).
+- Para destacar visualmente um bloco "premium" (ex.: plano recomendado, stat highlight): usar **accent line** 2-4px superior ou esquerda, com `var(--accent-blue-500)` ou um gradient.
 
 ### Section header (`.iqbe-section-header`)
 - Centro, max-width 750px.
@@ -83,6 +115,10 @@
 
 ### Section divider (`.iqbe-divider`)
 - Linha 1px, gradient horizontal `transparent → rgba(0,102,255,0.15) → transparent`. Margem `64-96px`.
+
+### Hairline (entre items dentro de uma secção)
+- Linha 1px sólida `var(--border-subtle)`, normalmente full-width do bloco pai.
+- Usar entre score bands, entre comparison rows, entre FAQ items, entre stat numbers.
 
 ## Animações globais (Webflow Interactions ou GSAP)
 
