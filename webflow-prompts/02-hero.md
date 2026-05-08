@@ -39,8 +39,9 @@ Bloco principal envolto em FadeIn (delay 0).
 
 3) SUBHEADLINE
 - 18px (text-lg) mobile / 20px (text-xl) desktop, weight 300 (font-light), cor #4A5578, leading-relaxed (1.625), max-w 512px (max-w-lg), mb 32px.
-- Texto EXACTO (com <strong> nas keywords):
-  Go beyond static quizzes. IQbe is a premium <strong>IQ test</strong> and <strong>brain test mental</strong> assessment that measures your cognitive health, 3D thinking, and executive problem-solving in one fast, scientifically validated platform.
+- Texto EXACTO (com <strong> nas keywords primárias):
+  Go beyond static quizzes. IQbe is a premium <strong>IQ test</strong> and <strong>brain assessment</strong> that measures your <strong>cognitive health</strong>, 3D thinking, and executive problem-solving — in one fast, scientifically validated platform.
+  (Mudança: "brain test mental" → "brain assessment" porque "brain test mental" é EN gramaticalmente partido e não defensável; "brain assessment" mantém densidade SEO equivalente.)
 
 4) CTA + REASSURANCE (flex column mobile / row sm+, items-center, gap 16px, w-full sm:w-auto)
 - BOTÃO primário pill:

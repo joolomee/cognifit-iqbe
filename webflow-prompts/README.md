@@ -32,6 +32,7 @@
 | 13 | [13-final-cta.md](./13-final-cta.md) | Final CTA — atmospheric background | FinalCTA.tsx |
 | 14 | [14-footer.md](./14-footer.md) | Footer CogniFit (mega footer) | Layout.tsx → Footer |
 | 15 | [15-seo-head.md](./15-seo-head.md) | SEO `<head>` global + JSON-LD (Organization · WebSite · WebApplication · MedicalWebPage · HowTo · FAQPage · BreadcrumbList) | SEO.tsx |
+| **★** | **[CLAIMS-AUDIT.md](./CLAIMS-AUDIT.md)** | **Auditoria completa de todos os claims com risco de defensibilidade — status, fonte requerida, replacement sugerido. Consultar antes de aprovar copy → live.** | — |
 
 ## Estrutura visual da landing (ordem das secções na página)
 

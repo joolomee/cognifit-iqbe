@@ -47,7 +47,8 @@ Q5: "Does the test require language comprehension?"
 A5: "No. The IQbe is a completely non-verbal intelligence test. All instructions and tasks are designed to be universally understood regardless of your native language, making it highly cross-culturally valid."
 
 Q6: "Can I take the IQ test on my phone?"
-A6: "Yes. IQbe is a modern intelligence test designed to work flawlessly on your desktop, tablet, and smartphone."
+A6: "Yes. IQbe is a modern intelligence test designed to work across desktop, tablet, and smartphone."
+(⚠ "flawlessly" removido — superlativo não defensável; substituído por "across" que é descritivo factual.)
 
 Q7: "Is this better than a traditional IQ quiz?"
 A7: "IQbe is fundamentally different from static online IQ quizzes because it combines reasoning with interactive 3D problem solving, acting as a complete brain test mental assessment."

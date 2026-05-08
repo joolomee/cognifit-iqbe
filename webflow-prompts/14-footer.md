@@ -49,7 +49,11 @@ Grid 1 col mobile / md 12 cols, gap-y 40px gap-x 32px, mb 64px.
 COLUNA 1 (md col-span 4, padding-right 0/32px) — LOGO + DESCRIPTION + APP STORES
 - Logo CogniFit (cognifit_-_Logo_Branco-01.svg) 32px height, brightness 0 invert (forçar branco), mb 24px.
 - Description: 14px line-height 1.6 #94A3B8 (slate-400), max-width 280px, mb 32px:
-  "CogniFit is a leading digital cognitive assessment and training platform, helping millions worldwide understand and stimulate their cognitive abilities."
+  ⚠ TEXTO ACTUAL TEM 2 CLAIMS NÃO-AUDITADOS — substituir antes de live:
+  · "leading digital cognitive assessment and training platform" → "leading" precisa de fonte (ranking, market share). Substitui por "an established digital cognitive assessment and training platform" se não houver evidência.
+  · "helping millions worldwide" → confirmar nº real. Se < 10M, usar nº exacto (ex.: "trusted by 5M+ users in 30+ countries"). Se não houver dado actualizado → remover esta parte.
+  Versão segura por default:
+  "CogniFit develops digital cognitive assessment and training tools, used worldwide to help people understand and stimulate their cognitive abilities."
 
 - App store badges (flex column sm:row, gap 12px):
   · App Store badge: 144x44 pill, bg rgba(0,0,0,0.40), border 1px rgba(255,255,255,0.20), rounded 8px, hover bg rgba(0,0,0,0.60) e border rgba(255,255,255,0.40).

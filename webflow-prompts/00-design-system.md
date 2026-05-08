@@ -169,8 +169,8 @@ Para qualquer bloco informativo (feature, stat, testemunho, audience, etc.):
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <title>CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation</title>
-  <meta name="description" content="Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health with advanced 3D fluid reasoning." />
-  <meta name="keywords" content="CogniFit QI Assessment, IQ test, intelligence test, brain test mental, mental health test, IQ intelligence, premium IQ test, online cognitive assessment, fluid intelligence test, accurate brain test, professional intelligence test, valid IQ score" />
+  <meta name="description" content="Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health with advanced 3D fluid reasoning." />
+  <meta name="keywords" content="CogniFit QI Assessment, IQ test, intelligence test, brain test mental, mental health test, IQ intelligence, premium IQ test, online cognitive assessment, fluid intelligence test, science-based brain test, professional intelligence test, valid IQ score" />
   <meta name="author" content="CogniFit" />
   <link rel="canonical" href="https://brain.cognifit.com/IQ-test" />
 
@@ -178,7 +178,7 @@ Para qualquer bloco informativo (feature, stat, testemunho, audience, etc.):
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://brain.cognifit.com/IQ-test" />
   <meta property="og:title" content="CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation" />
-  <meta property="og:description" content="Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
+  <meta property="og:description" content="Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
   <meta property="og:image" content="https://brain.cognifit.com/og-iqbe.jpg" />
   <meta property="og:site_name" content="CogniFit" />
   <meta property="og:locale" content="en_US" />
@@ -187,7 +187,7 @@ Para qualquer bloco informativo (feature, stat, testemunho, audience, etc.):
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://brain.cognifit.com/IQ-test" />
   <meta property="twitter:title" content="CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation" />
-  <meta property="twitter:description" content="Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
+  <meta property="twitter:description" content="Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
   <meta property="twitter:image" content="https://brain.cognifit.com/og-iqbe.jpg" />
 
   <!-- Robots / search -->

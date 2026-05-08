@@ -10,7 +10,7 @@ Cria o BLOCO <head> SEO global da landing IQbe — meta tags primárias, OG, Twi
 INSTRUÇÕES PARA WEBFLOW
 - Página → Settings → SEO Settings:
   · Title Tag: "CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation"
-  · Meta Description: "Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health with advanced 3D fluid reasoning."
+  · Meta Description: "Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health with advanced 3D fluid reasoning."
   · Open Graph Title/Description: idem.
   · OG Image: 1200x630 capturando o hero (export PNG/JPG do Webflow).
 - Página → Settings → Custom Code → Inside <head> tag: colar o bloco abaixo.
@@ -27,8 +27,8 @@ BLOCO HTML COMPLETO PARA <head>
 <!-- Primary Meta Tags -->
 <title>CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation</title>
 <meta name="title" content="CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation" />
-<meta name="description" content="Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health with advanced 3D fluid reasoning." />
-<meta name="keywords" content="CogniFit QI Assessment, IQ test, intelligence test, brain test mental, mental health test, IQ intelligence, premium IQ test, online cognitive assessment, fluid intelligence test, accurate brain test, professional intelligence test, valid IQ score" />
+<meta name="description" content="Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health with advanced 3D fluid reasoning." />
+<meta name="keywords" content="CogniFit QI Assessment, IQ test, intelligence test, brain test mental, mental health test, IQ intelligence, premium IQ test, online cognitive assessment, fluid intelligence test, science-based brain test, professional intelligence test, valid IQ score" />
 <meta name="author" content="CogniFit" />
 <link rel="canonical" href="https://brain.cognifit.com/IQ-test" />
 
@@ -36,7 +36,7 @@ BLOCO HTML COMPLETO PARA <head>
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://brain.cognifit.com/IQ-test" />
 <meta property="og:title" content="CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation" />
-<meta property="og:description" content="Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
+<meta property="og:description" content="Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
 <meta property="og:image" content="https://brain.cognifit.com/og/iqbe-1200x630.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -51,7 +51,7 @@ BLOCO HTML COMPLETO PARA <head>
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://brain.cognifit.com/IQ-test" />
 <meta property="twitter:title" content="CogniFit QI Assessment: Premium IQ Test & Cognitive Evaluation" />
-<meta property="twitter:description" content="Take the most accurate online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
+<meta property="twitter:description" content="Take a scientifically grounded online IQ test. The CogniFit QI Assessment evaluates your intelligence, mental fitness, and cognitive health." />
 <meta property="twitter:image" content="https://brain.cognifit.com/og/iqbe-1200x630.jpg" />
 <meta property="twitter:site" content="@CogniFit" />
 <meta property="twitter:creator" content="@CogniFit" />
@@ -136,7 +136,7 @@ BLOCO HTML COMPLETO PARA <head>
   "name": "CogniFit QI Assessment (IQbe)",
   "alternateName": "CogniFit Intelligence Test",
   "url": "https://brain.cognifit.com/IQ-test",
-  "description": "A scientifically validated IQ test and cognitive assessment. Accurately measure your intelligence, brain health, and mental fitness.",
+  "description": "A scientifically grounded IQ test and cognitive assessment. Measure your intelligence, brain health, and mental fitness.",
   "applicationCategory": "EducationalApplication",
   "applicationSubCategory": "Cognitive Assessment",
   "operatingSystem": "Web, iOS, Android",

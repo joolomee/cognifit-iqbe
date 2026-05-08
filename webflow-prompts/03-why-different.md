@@ -53,7 +53,13 @@ Linha 5
 CTA TEXT LINK (centered, mt 40px)
 - Botão sem fundo, fonte 18px weight 700 #0066FF, hover #0A102E (color transition 300ms).
 - Texto + ícone ArrowRight (20px) com hover translateX +8px.
-- Texto: "Experience the difference" + ícone arrow.
+- Texto: "Experience the difference"
+
+⚠ ANTI-PATTERN: NÃO acrescentar bloco de stats abaixo deste CTA
+A IA do Figma Make tende a gerar um stats block "5 / 3D / 0" (5 Cognitive Dimensions, 3D Interactive Challenges, 0 Cultural Bias) após este CTA. Resistir:
+- "0 Cultural Bias" é FALSO (nenhum teste cognitivo tem zero viés cultural — usar "Low" se quiser stat).
+- "5 Cognitive Dimensions" entra em conflito com a secção 06 que mostra 4 dimensões.
+Se o bloco for desejável: alinhar números com whitepaper antes de publicar e substituir "0" por "Low". Ver `CLAIMS-AUDIT.md` para detalhe. + ícone arrow.
 
 ANIMAÇÕES
 - SectionHeader: FadeIn (y 40, opacity 0→1, 0.6s ease-out, viewport once).
