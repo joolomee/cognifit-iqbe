@@ -1,134 +1,179 @@
 # 02 — Hero
 
-> Secção mais crítica. Replica o componente `Hero` (IntroSections.tsx) com 100svh, split 50/50, badge pill com dot a pulsar, H1 gigante com gradient na segunda linha, sub-headline editorial, CTA primário + microcopy de confiança, trust strip "37,505+ Datasets · Raven's Matrices Based", **3D Cube interactivo** à direita com 3 floating labels animadas, e indicador "Scroll to explore" centrado abaixo.
+> Replica fielmente o componente `Hero` (IntroSections.tsx) + `InteractiveCube.tsx`. 100svh, split 1fr/1fr no desktop. Coluna esquerda: badge pill com dot azul a pulsar, H1 multi-linha com a 2ª parte em gradient azul, subheadline editorial com termos em bold, CTA pill primário + 2 linhas de reassurance, trust strip com 2 indicadores. Coluna direita: cubo 3D 3×3×3 interactivo (auto-rotate + drag) com 3 floating labels animadas. Indicador "Scroll to explore" centrado no fundo do hero.
 
 ## Prompt completo
 
 ```
-Cria a SECÇÃO HERO do IQbe — landing page de avaliação cognitiva premium da CogniFit.
+Cria a SECÇÃO HERO do IQbe — landing de avaliação cognitiva premium da CogniFit. Replica EXACTAMENTE o componente Hero do código fonte.
 
 LAYOUT
-- 100svh mínimo, padding-top 112-128px (acomodar navbar fixo), padding-bottom 64px.
-- max-width: 1300px centrado.
-- Grid desktop (≥1024px): 2 colunas 1fr 1fr, gap 80px, vertical center.
-- Mobile/tablet: 1 coluna empilhada, coluna esquerda primeiro, gap 64px.
+- <section> relative, min-h 100svh, flex items-center justify-center, overflow hidden.
+- Padding-top 112px mobile / 128px desktop (acomodar navbar fixo). Padding-bottom 64px.
+- Container interior: max-width 1300px, mx-auto, padding-x 16px mobile / 24px sm+.
+- Grid: 1 coluna mobile, 2 colunas (1fr 1fr) ao 1024px+. Gap 32px mobile / 80px desktop. items-center. relative z-10.
 
-GLOW DE FUNDO (decorativo)
-- Camada absoluta atrás do conteúdo, centrada, 800x800px.
-- background: radial-gradient(circle, rgba(0,102,255,0.10) 0%, transparent 70%)
-- filter: blur(150px). pointer-events:none.
+GLOW DE FUNDO (decorativo, atrás do grid)
+- Absolute, top 50% left 50% translate -50%/-50%.
+- 800x800px, rounded-full, bg #0066FF a 10% opacity, blur 150px, pointer-events:none.
 
-COLUNA ESQUERDA (texto + CTA + trust)
+══════ COLUNA ESQUERDA ══════
+flex column items-start, space-y 32px (8 em escala Tailwind), mt 48px mobile / 0 desktop.
+Bloco principal envolto em FadeIn (delay 0).
 
 1) BADGE PILL EYEBROW
-- inline-flex, gap 8px, padding 6px 12px, border-radius 999px.
-- background: rgba(255,255,255,0.60), border 1px rgba(0,102,255,0.10).
-- Cor #0066FF, font 12px weight 600, tracking 0.08em uppercase.
-- Conteúdo: dot 8px #0066FF a pulsar (animate-ping equivalente: scale 1 → 2.5 + opacity 1 → 0, 1.4s ease-out infinite, sobreposto a um dot fixo).
+- inline-flex items-center, gap 8px, padding 6px 12px, rounded-full.
+- bg rgba(255,255,255,0.60), border 1px rgba(0,102,255,0.10), shadow-sm.
+- Cor #0066FF, 12px weight 600 (semibold), uppercase, tracking-widest (0.1em).
+- mb 24px.
+- Conteúdo: dot 8x8 com `animate-ping` Tailwind nativo (scale 1→2.25 + opacity 1→0, 1s cubic-bezier(0,0,0.2,1) infinite) sobre dot fixo 8x8 #0066FF.
 - Texto: "CogniFit QI Assessment".
 
 2) H1
-- Plus Jakarta Sans 800, clamp(40px, 6vw, 90px), line-height 1.05, tracking -0.02em, cor #0A102E.
-- Drop-shadow muito subtil para profundidade (filter: drop-shadow(0 1px 2px rgba(0,0,0,0.06))).
-- Duas linhas:
+- Plus Jakarta Sans 800 (extrabold), cor #0A102E, leading 1.05, tracking-tight (~-0.025em), drop-shadow-sm.
+- Tamanhos: 40px → sm 60px → md 80px → lg 90px (sem clamp; usa breakpoints discretos).
+- mb 24px (mb-6) + pb 8px (pb-2).
+- Estrutura:
   · "The Ultimate" (cor sólida #0A102E)
-  · "Intelligence Test." (gradient text — linear-gradient(90deg, #00A3FF 0%, #0066FF 100%))
+  · <br> oculto em <640px, visível em ≥640px (forçar quebra)
+  · <span> "Intelligence Test." com gradient text linear-gradient(90deg, #00A3FF 0%, #0066FF 100%) — `bg-clip-text`, `text-transparent`, drop-shadow-sm extra, inline-block, pb 8px.
 
 3) SUBHEADLINE
-- 18-20px, weight 300 (light), cor #4A5578, line-height 1.6, max-width 480px.
-- Texto humanizado:
-  "Go beyond static quizzes. IQbe is a premium IQ test and brain test mental assessment that measures your cognitive health, 3D thinking, and executive problem-solving in one fast, scientifically validated platform."
+- 18px (text-lg) mobile / 20px (text-xl) desktop, weight 300 (font-light), cor #4A5578, leading-relaxed (1.625), max-w 512px (max-w-lg), mb 32px.
+- Texto EXACTO (com <strong> nas keywords):
+  Go beyond static quizzes. IQbe is a premium <strong>IQ test</strong> and <strong>brain test mental</strong> assessment that measures your cognitive health, 3D thinking, and executive problem-solving in one fast, scientifically validated platform.
 
-4) CTA + REASSURANCE INLINE (flex row, gap 16px)
-- Botão primário pill — gradient #0066FF → #00A3FF, padding 20px 40px, fonte 18px weight 700, ícone arrow-right depois do texto.
-- Texto: "Check My IQ Score"
-- Hover: gradient escurece (from-#0055DD to-#0088DD) + -translateY 2px + shadow reforçada.
-- onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank").
-- Coluna ao lado: 2 linhas micro-text 13px weight 500 #4A5578:
-  · ✓ (ícone CheckCircle 14px #00D4AA) "100% Online & Secure"
-  · ✓ "Scientifically Validated"
+4) CTA + REASSURANCE (flex column mobile / row sm+, items-center, gap 16px, w-full sm:w-auto)
+- BOTÃO primário pill:
+  · Padding 40x20 (px-10 py-5), 18px weight 700 (font-bold), rounded-full, white text.
+  · bg linear-gradient(90deg, #0066FF 0%, #00A3FF 100%) — sobrescreve gradient default da Button base.
+  · Hover: gradient escurece (from #0055DD to #0088DD) + translateY -2px (-translate-y-0.5) + shadow-xl. Transition 300ms.
+  · Shadow base shadow-lg.
+  · Conteúdo: texto "Check My IQ Score" + ArrowRight (lucide) 20x20 ml 8px.
+  · onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
+- REASSURANCE (flex column justify-center, 13px weight 500 #4A5578):
+  · Linha 1: <CheckCircle> lucide 14x14 #00D4AA gap 6px + "100% Online & Secure"
+  · Linha 2 (mt 4px): <CheckCircle> 14x14 #00D4AA + "Scientifically Validated"
 
-5) TRUST STRIP (debaixo, com border-top 1px rgba(0,102,255,0.10), pt 32px mt 16px)
-- flex wrap, gap-x 24px gap-y 12px.
-- Item 1: Shield icon (16px #0066FF) + "37,505+ Datasets" (14px weight 600 #4A5578).
-- Separador: dot 4px rgba(0,102,255,0.30).
-- Item 2: Brain icon (16px #0066FF) + "Raven's Matrices Based".
+5) TRUST STRIP — bloco separado dentro de FadeIn delay 0.2s, w-full
+- pt 32px, mt 16px, border-top 1px rgba(0,102,255,0.10).
+- flex flex-wrap items-center, gap-x 24px, gap-y 12px.
+- Item 1: <Shield> lucide 16x16 mr 8px #0066FF + "37,505+ Datasets" — 14px weight 600 (semibold) #4A5578.
+- Separador: dot 4x4 (w-1 h-1) rounded-full bg rgba(0,102,255,0.30); só visível em sm+ (`hidden sm:block`).
+- Item 2: <Brain> lucide 16x16 mr 8px #0066FF + "Raven's Matrices Based" — 14px weight 600 #4A5578.
 
-COLUNA DIREITA (visual hero)
-- Container quadrado 350-600px aspect-square, flex center, position relative.
+══════ COLUNA DIREITA — Visual ══════
+FadeIn delay 0.3s, direction "left" (entra com x-40 → x-0).
+Container: relative, flex center, w-full h-full, min-h 350px / 500px md+.
+Inner: relative w-full max-w 350px / 600px md+, aspect-square, flex center, scale 0.75 / 0.90 sm / 1.0 md, mt 32px / 0 lg+.
 
-ELEMENTO PRINCIPAL: 3D CUBE INTERACTIVO (custom code via Three.js OU CSS 3D)
-- Cubo 3x3x3 (Rubik-like) com:
-  · 26 sub-cubos visíveis (sem o central oculto e sem 1 peça frontal-esquerda — o "missing piece" do puzzle de Raven).
-  · Sub-cubo size 90px, gap 8px (escala mobile 0.75-0.90).
-  · Faces brancas com gradient `linear-gradient(135deg, #FFFFFF 0%, #F4F7FA 100%)`, border 1px branco, inset shadow 0 0 12px rgba(0,0,0,0.03).
-  · Body do cubo (entre faces): #CBD5E1 com border-radius 12px e shadow 0 4px 6px rgba(0,0,0,0.05).
-  · Padrões nas faces externas:
-    - Face frontal/traseira (Z): 2 dots #0066FF (top-right + bottom-left) 14px diameter.
-    - Face direita/esquerda (X): cruz vermelha #EF4444, dois traços 6px rotated ±45°.
-    - Face topo/base (Y): triângulo verde #00D4AA apontando para cima, base 28px altura 24px.
-  · Highlight do "missing piece" (-1, 0, 1): borda 3px #00A3FF/60 com shadow 0 0 30px rgba(0,163,255,0.40), animate-pulse opacity 0.6 → 1 → 0.6.
+CUBO 3D INTERACTIVO (z 10, absolute inset 0, pointer-events auto, scale 0.9 / 1.0 sm+)
+Implementação CSS 3D pura (a do código fonte) ou WebGL/Three.js. Specs do código fonte:
 
-INTERACÇÃO DO CUBO
-- Auto-rotação contínua quando idle: rotateX +0.005°/frame, rotateY +0.008°/frame (±10°/s e ±15°/s a 60fps).
-- Drag/swipe: utilizador pode rodar manualmente (info.delta.x → rotateY +0.5x; info.delta.y → rotateX -0.5x). Suspende o auto-rotate enquanto isDragging.
-- Antes de qualquer interacção: ícone "Hand" (Phosphor) 48px #00A3FF a oscilar diagonal (translateX -30px → +30px, translateY +30px → -10px) loop 2.5s, fade out a 90% do ciclo. Esconder quando user toca/arrasta.
-- Cursor: grab → grabbing.
-- TouchAction: none. Z-index 50 do overlay, 60 do hand hint.
+ESTRUTURA
+- 3×3×3 grid (Rubik). 27 posições no total, mas removem-se 2:
+  · O centro absoluto (0,0,0) — sempre invisível.
+  · A peça (-1, 0, 1) — frontal-esquerda-meio — para criar o "missing piece" estilo Raven.
+  · Resultado visível: 25 sub-cubos.
+- Sub-cubo: width 90px, gap 8px → offset entre centros = 98px.
+- Container do cubo tem `perspective: 1800px` (no parent), `transform-style: preserve-3d`.
+- Rotação inicial: rotateX 15°, rotateY 45° (mostra 3 faces simultaneamente).
 
-3 FLOATING LABELS À VOLTA DO CUBO (independent, parallax suave)
-Cada label: pill branco, padding 10px 20px, border 1px (cor varia), shadow 0 4px 15px (cor/8% opacity), texto 12-14px weight 700 + dot 8px da cor:
+SUB-CUBO (cada um)
+- Body entre faces: bg #CBD5E1, rounded 12px (rounded-xl), shadow-md.
+- Faces (6 por sub-cubo) cada uma absolute inset 0:
+  · Face style: bg linear-gradient(135deg, #FFFFFF 0%, #F4F7FA 100%), rounded 12px, border 1px branco, inset shadow 0 0 12px rgba(0,0,0,0.03).
+  · backfaceVisibility: hidden.
 
-- Label 1 — top-left (top:5-20%, left:0% / -5%)
-  · Cor: #00E5FF (cyan), shadow #00E5FF/8.
-  · Dot com glow `box-shadow: 0 0 10px #00E5FF` + animate-pulse.
-  · Texto: "3D Reasoning"
-  · Float: translateY -4px → +4px → -4px, 5s ease-in-out, delay 0.2s.
+PADRÕES nas faces externas (só renderizam no perímetro):
+- Front (Z=+1) e Back (Z=-1): 2 dots #0066FF circulares 14x14 px, rounded-full, shadow-sm. Posicionados:
+  · Top-right: top 4px, right 4px.
+  · Bottom-left: bottom 4px, left 4px.
+- Right (X=+1) e Left (X=-1): cruz vermelha — 2 traços `bg-red-500` (Tailwind = #EF4444), height 6px, width 32px, rotated +45° e -45°, rounded-full, shadow-sm.
+- Top (Y=-1) e Bottom (Y=+1): triângulo equilátero a apontar para cima, base 28px (border-l/r 14px transparent), altura 24px (border-b 24px solid #00D4AA), drop-shadow-sm.
 
-- Label 2 — top-right (top:5-10%, right:0% / 5%)
-  · Cor #7B61FF (violet).
-  · Texto: "Executive Function"
-  · Float: translateY -5px → +5px, 6s, delay 1s.
+HIGHLIGHT BOX DO MISSING PIECE (na posição vazia -1,0,1)
+- Renderiza 3 faces (front, right, left), cada uma absolute inset 0, border 3px solid rgba(0,163,255,0.60), rounded 12px (rounded-xl), shadow 0 0 30px rgba(0,163,255,0.40).
+- Animação: Tailwind `animate-pulse` nativa (opacity 1 ↔ 0.5, 2s cubic-bezier(0.4,0,0.6,1) infinite).
 
-- Label 3 — bottom-left (bottom:5-10%, left:0% / -15%)
-  · Cor #00D4AA (teal).
-  · Texto: "Fluid Intelligence"
-  · Float: translateY +4px → -4px, 4.5s, delay 1.5s.
+INTERACÇÃO
+- Auto-rotate idle: rotateX += delta * 0.005, rotateY += delta * 0.008 (delta em ms; ≈ 5°/s no X e 8°/s no Y).
+- Drag handler: ao arrastar (mouse ou touch), info.delta.x → rotateY += 0.5x, info.delta.y → rotateX -= 0.5y. Suspende auto-rotate enquanto isDragging===true.
+- Touch action none, cursor grab / grabbing active.
+- Overlay invisível drag-capture: absolute inset 0 z-50.
 
-INDICADOR SCROLL (abaixo do conteúdo, centrado, bottom 32px)
-- Initial opacity 0, fade in 1s com 2s delay (após o conteúdo principal aparecer).
-- Texto 12px weight 700 uppercase tracking-widest cor #4A5578: "Scroll to explore".
-- Ícone ChevronDown 20px #0066FF a saltar verticalmente: y 0 → 8px → 0, 1.5s ease-in-out infinite.
+HAND HINT (visível até 1ª interacção)
+- absolute z 60, pointer-events none.
+- Ícone <Hand> de lucide-react, 48x48 (w-12 h-12), color #00A3FF + fill #00A3FF/20, strokeWidth 1.5, rotate -15deg.
+- Wrapper com `text-white drop-shadow-lg` (a class lucide interna sobrescreve text-white).
+- Animação keyframes (motion):
+  · initial: opacity 0, x -30, y 30
+  · animate: opacity [0, 1, 1, 0], x [-30, 30, 30, 30], y [30, -10, -10, -10]
+  · duration 2.5s, repeat Infinity, repeatDelay 0.5s, ease "easeInOut"
+- Esconder ao primeiro pointerDown ou drag (`hasInteracted` true).
 
-ANIMAÇÕES DE ENTRADA (sequenciadas)
-1) Badge: opacity 0 → 1 + y 40 → 0, delay 0s, 0.6s ease-out.
-2) H1: stagger por linha — linha 1 delay 0.05s, linha 2 delay 0.15s. Pode ser word-by-word reveal com clip-path 0% → 100% (1s).
-3) Subheadline: delay 0.25s, 0.6s.
-4) CTA + reassurance: delay 0.35s.
-5) Trust strip: delay 0.5s.
-6) 3D Cube + labels: cube fade in 0.8s delay 0.4s; labels stagger delay 0.6/0.8/1.0s.
-7) Scroll indicator: delay 2s.
+══════ 3 FLOATING LABELS (à volta do cubo) ══════
+Cada label é uma pill branca absolute, z 20, pointer-events none, will-change-transform.
+Style partilhado: bg #FFFFFF, padding 16x8 mobile / 20x10 md+ (px-4 md:px-5 py-2 md:py-2.5), rounded-full, whitespace-nowrap.
+Texto: 12px mobile / 14px md+, weight 700 (font-bold), tracking-wide, cor #0A102E (TODOS OS LABELS).
+Cor dinâmica está APENAS na border, na shadow e no dot.
+
+LABEL 1 — "3D Reasoning"
+- Posição: absolute top 5% / 20% md+, left 0% / -5% md+.
+- Border 1px rgba(0,102,255,0.10) (BLUE), shadow 0 4px 15px rgba(0,102,255,0.08) (BLUE).
+- Dot 8x8 rounded-full bg #00E5FF (cyan) + box-shadow 0 0 10px #00E5FF + Tailwind `animate-pulse`.
+- Animação: motion y [-4, 4, -4], duration 5s, repeat Infinity, ease "easeInOut", delay 0.2s.
+
+LABEL 2 — "Executive Function"
+- Posição: absolute top 10% / 5% md+, right 0% / 5% md+ (md:bottom-auto).
+- Border 1px rgba(123,97,255,0.10) (VIOLET), shadow 0 4px 15px rgba(123,97,255,0.08) (VIOLET).
+- Dot 8x8 rounded-full bg #7B61FF (sem glow, sem animate-pulse).
+- Animação: motion y [-5, 5, -5], duration 6s, ease "easeInOut", delay 1s.
+
+LABEL 3 — "Fluid Intelligence"
+- Posição: absolute bottom 5% / 10% md+, left 0% / -15% md+ (md:top-auto, md:right-auto).
+- Border 1px rgba(0,212,170,0.10) (TEAL), shadow 0 4px 15px rgba(0,212,170,0.08) (TEAL).
+- Dot 8x8 rounded-full bg #00D4AA (sem glow, sem animate-pulse).
+- Animação: motion y [4, -4, 4], duration 4.5s, ease "easeInOut", delay 1.5s.
+
+══════ INDICADOR SCROLL (rodapé do hero, fora do grid) ══════
+- absolute bottom 32px (bottom-8), left 50% translateX -50% — centrado horizontalmente.
+- flex column items-center gap 8px, cor #4A5578.
+- Initial opacity 0 → animate opacity 1, transition delay 2s, duration 1s.
+- Texto: "Scroll to explore" — 12px (text-xs) uppercase tracking-widest weight 700 (font-bold).
+- Ícone <ChevronDown> lucide 20x20 (w-5 h-5) #0066FF, dentro de motion.div com animate y [0, 8, 0], duration 1.5s, repeat Infinity, ease "easeInOut".
+
+══════ ANIMAÇÕES DE ENTRADA (apenas 3 FadeIns reais) ══════
+- FadeIn 1 (bloco principal: badge + H1 + sub + CTA + reassurance): y 40 → 0, opacity 0 → 1, duration 0.6s ease-out, delay 0s. ÚNICO bloco — não há stagger interno.
+- FadeIn 2 (trust strip): mesmas specs, delay 0.2s.
+- FadeIn 3 (coluna direita inteira: cubo + 3 labels): direction "left" (x 40 → 0 na verdade x -40 → 0 conforme implementação), delay 0.3s.
+- Floating labels: motion infinitos descritos acima começam imediatamente após o FadeIn 3.
+- Scroll indicator: opacity transition delay 2s.
+- (NÃO há word-by-word reveal no H1, NÃO há stagger por linha do H1, NÃO há AI-snippet sentence.)
 
 ACESSIBILIDADE
-- <section aria-labelledby="hero-title" id="hero">.
+- <section id="hero" aria-labelledby="hero-title">.
 - <h1 id="hero-title">.
-- 3D Cube em <figure aria-label="Interactive 3D cube — IQbe puzzle preview"> com fallback estático para prefers-reduced-motion.
-- Para reduced-motion: cube imobilizado, labels sem float, fade-ins instantâneos.
+- 3D Cube embrulhar em <figure aria-label="Interactive 3D cube — IQbe Raven-inspired puzzle preview"> com fallback estático para `prefers-reduced-motion: reduce`.
+- @media reduced-motion: cubo congelado (sem auto-rotate nem hand hint), labels sem float, animate-ping/pulse off.
 - Botão CTA com aria-label completo: "Check My IQ Score — start the IQbe assessment in a new tab".
+- Trust strip dot separator é decorativo, aria-hidden.
+- Ícones lucide (Shield, Brain, CheckCircle, ArrowRight, Hand, ChevronDown) sempre aria-hidden="true".
 
 SEO
-- H1 único na página, com keyword principal "Intelligence Test".
-- LCP candidate: o <h1> ou a primeira linha do hero. Garante font-display: swap e preconnect às fontes.
-- AI-snippet sentence (logo abaixo do hero): "IQbe is a digital, non-verbal IQ test based on Raven-inspired reasoning tasks, enhanced with interactive 3D problem solving to assess fluid intelligence online."
-- JSON-LD WebApplication a referenciar este hero como `mainEntity` (ver prompt 15).
-- alt do logo: "CogniFit Logo".
-- Meta og:image: capturar este hero (1200x630).
+- H1 ÚNICO da página, com keyword "Intelligence Test" + tag <strong>IQ test</strong>, <strong>brain test mental</strong> no <p> da subheadline (sinal forte para SEO).
+- LCP candidate: o <h1>. Garantir font-display:swap na Plus Jakarta Sans + preconnect a fonts.googleapis.com / fonts.gstatic.com.
+- og:image (1200x630): exportar uma versão estática do hero para meta. NÃO usar o cubo animado.
+- Schema (JSON-LD): tratado no prompt 15 — WebApplication + MedicalWebPage referenciam este hero como mainEntity.
 ```
 
 ## Notas Webflow
 
-- **3D Cube** → custom code embed. Recomendo `<canvas>` com Three.js (cubo 3x3x3 instanciado em loop) + `dat.gui` para tuning. Fallback CSS-3D se o utilizador escolher leveza (ver código original em `src/app/components/InteractiveCube.tsx`).
-- **Floating labels**: 3 divs absolutos com Webflow Interactions "While in viewport — loop" oscillating Y.
-- **Pulse dot** (badge): CSS keyframes via embed.
-- **Drag**: Three.js OrbitControls (`enableDamping: true, autoRotate: true`).
-- **Reduced motion**: media query global `@media (prefers-reduced-motion: reduce) { * { animation-duration: 0s !important; transition-duration: 0s !important; } }` numa class utilitária aplicada ao body.
+- **3D Cube**: opção mais simples = recriar com CSS 3D (transforms + preserve-3d) — todo o código fonte é CSS-only, não usa Three.js. Embed `<div class="cube-host">` no Webflow + 1 script JS pequeno para `useAnimationFrame` (rotateX/Y delta) e drag handler. Para tuning rápido podes usar GSAP em vez de motion.
+- **Floating labels**: 3 divs absolutos. Webflow Interactions Element Trigger "While Page is Loading" → animation ease-in-out infinite, eixo Y só. Cores nas combo-classes `.label--blue/violet/teal`.
+- **Pulse dot do badge**: usar Tailwind `animate-ping` directo via custom code embed `@keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }` aplicado a `.dot-ping`.
+- **Animate-pulse do highlight box**: idem, `@keyframes pulse { 50% { opacity: .5; } }`.
+- **Drag**: vanilla JS pointer events com pointermove/up listeners; ou GSAP Draggable (`type:"x,y"`).
+- **Reduced motion**: `@media (prefers-reduced-motion: reduce) { .cube-host *, .label-float, .scroll-cue * { animation: none !important; transition: none !important; } }`.
+- **Hand hint**: SVG inline da `Hand` de lucide; animação por keyframes 4-stop como descrito.
+- **NÃO usar Three.js** se não for preciso — adiciona ~600KB de bundle e o efeito CSS 3D é praticamente idêntico ao do código fonte.
