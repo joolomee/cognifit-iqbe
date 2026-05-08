@@ -80,6 +80,17 @@ OS 5 BANDS:
 NOTA FINAL (mt 40px, centered, max-width 600px, 14px weight 500 italic #8B95B5):
 "A score is not a complete portrait of a person's abilities, but it can offer a useful snapshot of reasoning and problem-solving performance."
 
+LEARN-MORE LINK (mt 16px, centered, abaixo da nota final) — caminho de verificação
+- Texto + ArrowRight 16px ml 6px.
+- 14px weight 600 #0066FF, hover #0A102E (color transition 200ms). Underline-on-hover via pseudo ::after height 1px scaleX 0→1 transform-origin left.
+- Texto: "Learn more about IQ score interpretation"
+- href: https://www.cognifit.com/research
+  (Página oficial CogniFit com referências científicas. SE existir uma página específica de metodologia/whitepaper IQbe, usar essa em vez de /research — preferível.)
+- target="_blank", rel="noopener".
+- aria-label="Learn more about IQ score interpretation — opens CogniFit research page in a new tab".
+
+Função do link (para chefe/legal): expõe um caminho público de verificação. Quem quiser confirmar que "~16% / ~34% / ~14% / ~2%" são propriedades da distribuição normal e não dados inventados pode seguir o link e ler. Reduz risco regulatório (transparência) e melhora trust signals para SEO.
+
 ANIMAÇÕES
 - Header: FadeIn standard.
 - Cada row: FadeIn com delay i*0.1s (stagger 100ms top→bottom).

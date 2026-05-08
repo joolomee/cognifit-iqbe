@@ -89,6 +89,31 @@ Atributos obrigatórios em cada link CTA:
 - `rel="noopener"` (segurança — evita que a target window manipule a parent window).
 - `aria-label="Check My IQ Score — start the IQbe assessment in a new tab"` ou equivalente descritivo (acessibilidade + GEO/AEO).
 
+## Regra de caminho de verificação (GLOBAL)
+
+Qualquer secção que mostre **números, percentagens, correlações ou claims científicos** deve oferecer um **link público de verificação** ("Learn more / Source / Methodology") visível ao utilizador. Princípio: o leitor que quiser confirmar a origem do dado tem caminho aberto, sem ter de pesquisar.
+
+Aplicar a:
+- **08 Score Meaning** — link para metodologia da escala (CogniFit research ou paper de referência).
+- **07 Real-World Data** (Prompt B numérico) — link para dataset audit ou whitepaper.
+- **09 Validity & Reliability** — link para o paper publicado com r/p/alpha (DOI sempre que possível).
+- **Quote box do 04 What Is IQbe** — se a citação for atribuída a alguém específico, link para a publicação original.
+
+Padrão visual do link:
+- Text-link inline, 14px weight 600 #0066FF, ícone ArrowRight 16px à direita.
+- Hover: cor #0A102E + underline animado (pseudo ::after scaleX 0→1, transform-origin left, 200ms).
+- target="_blank" + rel="noopener" + aria-label descritivo.
+- Sem rectângulo (regra global de framing).
+- Posição: imediatamente abaixo do bloco de dados, ou na nota final da secção.
+
+Destinos preferíveis (por ordem de credibilidade):
+1. Paper peer-reviewed CogniFit com DOI público.
+2. Whitepaper CogniFit acessível.
+3. Página de research/methodology no domínio CogniFit (`/research`).
+4. Referência externa autoritária (APA, Wechsler, Raven publication) — apenas se não houver fonte interna.
+
+Se NÃO houver fonte verificável, o claim em si tem de ser removido (regra de informação justificável). Não publicar dado sem caminho de verificação.
+
 ## Regra de informação justificável (GLOBAL)
 
 **Toda a copy com claims, números, percentagens, estatísticas, ratings ou metodologia tem de estar suportada por evidência interna ou pública verificável.** Não inventar números nem citar valores que não existem em estudo, dataset ou comunicação oficial CogniFit.
