@@ -1,133 +1,135 @@
-# 07 — Backed by Large-Scale Real-World Use
+# 07 — Grounded in Cognitive Science (default) / Backed by Real-World Data (com audit)
 
-> Replica `RealWorldData` (DataSections.tsx). Section header + 5 stat cards horizontais (overflow-x mobile) + parágrafo + bar chart 8 barras com bars destacadas (85-100, 100-115).
+> Substitui `RealWorldData` (DataSections.tsx). **Default = versão qualitativa sem números** (regra: tudo tem de ser real e verificável). A versão numérica fica como Prompt B, **só publicar se a equipa científica devolver os 6 valores auditados**.
 
-## Prompt completo
+---
+
+## ⚠ Regra para esta secção
+
+A versão numérica original (37,505 / 16–90 / 102.43 / 100 / 40–160 + distribuição em 8 bins) **não está auditada** e **não pode ser publicada**. Ler `CLAIMS-AUDIT.md` secção 07 para o detalhe completo. Resumo:
+- Os 6 valores numéricos são gerados pela IA do Figma Make sem fonte verificável.
+- A cauda superior (≥130 = 8,72%) é ~4× mais alta do que numa normal teórica — precisa de explicação documentada se for publicada.
+- O range 40–160 contradiz o doc técnico interno (55–145).
+- Os labels do chart contradizem as bandas da secção 08.
+
+**Path forward:**
+- **Default (Prompt A)**: versão qualitativa, sem números. Publicável já. Defensável sem audit interno.
+- **Alternativa (Prompt B)**: versão numérica, só publicar se a equipa científica devolver: snapshot date, mean calc, range canónico, justificação da cauda superior.
+
+---
+
+## Prompt A — Default (qualitativo, real e defensável)
 
 ```
-Cria a SECÇÃO "Backed by Large-Scale Real-World Use" — credibilidade com dados.
+Substitui inteiramente a secção "Backed by Large-Scale Real-World Use" do componente actual pela versão sem números abaixo. Não toques no resto do site.
 
 LAYOUT
-- max-width 1200px, padding 40-64px vertical, padding lateral 24px.
-
-⚠ JUSTIFIABILITY NOTICE
-Toda esta secção depende de um dataset interno (37,505 participantes; idades 16–90; média/mediana de QI; distribuição). Antes de publicar, confirmar com a equipa científica/produto que estes números são VERIFICÁVEIS num documento interno (auditoria, paper, dataset audit). Se não houver evidência → REMOVER a secção inteira. Não suavizar com "estimated" ou "approximately".
-
-ANÁLISE PSICOMÉTRICA (preparar respostas para perguntas de chefe/legal):
-- Soma das 8 percentagens = 100,00% (consistente).
-- Mean 102.43 vs Median 100 → enviesamento direito ligeiro, esperável em amostra online auto-seleccionada.
-- ⚠ Cauda superior (≥130) = 8,72% (3,77+4,95). Numa distribuição normal (μ=100, σ=15) seria ~2,3%. **~4× inflated.** Possíveis explicações a ter pronto: (a) self-selection bias, (b) repeat attempts, (c) escala IQbe ≠ Wechsler. Adicionar disclaimer no parágrafo explicativo se for publicado.
-- ⚠ Score range 40–160 contradiz o doc técnico original (55–145, ver `src/imports/pasted_text/iqbe-landing-prompt.md` linha 469). Decidir um único range canónico antes de live.
-- ⚠ Labels do chart ("VERY LOW / BELOW AVG / AVERAGE / ABOVE AVG / VERY HIGH") não batem com as bandas da secção 08 ("Below 85 / 85-100 / 100-115 / 115-130 / 130+"). Alinhar.
-
-CHECKLIST DE AUDIT (passar à equipa científica antes de live):
-□ Snapshot date dos 37,505 (data exacta de cutoff).
-□ Método de cálculo da média 102.43.
-□ Confirmação que mediana 100 não é um valor "by design" mas sim um resultado real.
-□ Range real de scores (40–160 vs 55–145).
-□ Janela temporal "last two years" — datas exactas.
-□ Justificação documentada para a cauda superior anómala (>130 = 8,72%).
+- max-width 1200px centrado, padding 40-64px vertical, padding lateral 24px.
+- SEM cards, SEM rectângulos. Só texto + ícones + dividers (regra global).
 
 SECTION HEADER
-- H2: "Backed by Large-Scale Real-World Use"
-- (sem subtitle no header, vai num parágrafo separado abaixo)
+- H2 (Plus Jakarta Sans 700, clamp 36-52px, leading-tight, tracking-tight, #0A102E):
+  "Grounded in Cognitive Science"
+- Subtitle (centered max 750px, 18px weight 300 #4A5578, leading 1.6):
+  "IQbe is built on Raven's Standard Progressive Matrices — one of the most widely studied paradigms for measuring fluid intelligence. The test extends that framework with interactive 3D problem solving, bringing real-world cognitive demands closer to the assessment experience."
 
-PARÁGRAFO INTRO (centered, max-width 720px, mb 64px, 18px weight 400 line-height 1.6 #4A5578)
-"IQbe is not only grounded in cognitive science — it is also supported by extensive real-world usage. In an internal dataset collected over the last two years, 37,505 participants completed the test."
+3 PILARES (mt 64px, max 1000px centered, grid 1/3 cols mobile/desktop, gap 32-48px) — SEM cards
+Cada pilar:
+- flex column items-start gap 16px, padding interno 16-24px (respiração).
+- Hover (opcional): translateY -4px (300ms ease).
+- Hairlines 1px verticais rgba(0,102,255,0.10) entre pilares (em desktop).
 
-LINHA DE STAT BLOCKS (overflow-x scroll mobile com snap-mandatory, gap 16px, mb 64px, hide-scrollbar) — SEM CARD/RECTÂNGULO
+ÍCONE (sem container/box): 32-40px lucide, cor #0066FF.
 
-5 stat blocks. Cada um:
-- min-width 180px, flex 1, snap-center.
-- SEM rounded, SEM border, SEM bg, SEM shadow.
-- Padding 24px, text-center, flex column items-center justify-center.
-- Accent line top 2px #0066FF (linha horizontal acima do número, como underline invertida — não fecha caixa).
-- Opcional: hairlines 1px verticais rgba(0,102,255,0.10) entre stat blocks em desktop (separar sem caixa).
+PILAR 1 — Brain icon (lucide)
+Title: "Peer-reviewed framework"
+Body 15px line 1.6 #4A5578: "Built on Raven's Progressive Matrices, a paradigm in cognitive psychology since 1938 and one of the most cited non-verbal intelligence tests in the literature."
+(Verifiável: Raven's foi publicado em 1938 — facto público.)
 
-Conteúdo de cada card:
-- Valor: gradient text linear-gradient(90deg, #0066FF, #00E5FF), 32-40px font-extrabold (weight 800), line-height 1.2, mb 8px, whitespace-nowrap.
-  Aplicar -webkit-background-clip:text, -webkit-text-fill-color:transparent, background-clip:text.
-- Label: 12-13px uppercase tracking-wider weight 700 #4A5578.
+PILAR 2 — Globe icon (lucide)
+Title: "Non-verbal by design"
+Body: "Tasks rely on visual reasoning rather than language, making the test usable across cultures and educational backgrounds with low cultural bias."
+(Verifiável: descritivo factual + atributo bem documentado do paradigma Raven.)
 
-5 stats:
-1) "37,505" / "participants"
-2) "16–90" / "age range"
-3) "102.43" / "average IQ"
-4) "100" / "median IQ"
-5) "40–160" / "score range"
-
-ANIMAÇÃO STAT CARDS
-- FadeIn delay i*0.1s.
-- Counter-up: o valor numérico anima de 0 → valor final em 1.4s ease-out-expo, ao entrar no viewport. Para "16–90", "40–160", animar ambas as pontas em paralelo.
-
-PARÁGRAFO TRANSITION (centered max-width 720px, mb 48px, 16px #4A5578):
-"The score distribution is broad and interpretable, with most users clustering between 85 and 115 and meaningful differentiation across higher and lower score ranges."
-
-BAR CHART (max-width 900px centered) — SEM CARD/RECTÂNGULO
-- SEM rounded, SEM border, SEM bg de container. Apenas o chart inline com padding vertical 16-40px para respiração.
-- min-width 450px, height 280-350px (alt mobile ≈ 280px), overflow-x auto, hide-scrollbar.
-- Container interno: flex items-end justify-between gap 6-12px, padding 24-40px top, 24px bottom.
-
-8 BARRAS (cada uma flex column items-center flex-1 group):
-
-Cada barra:
-- Track (rectangle background): w-full, relative, flex items-end, h 180-280px, bg #F0F5FA, rounded-t 6px, overflow hidden.
-- Fill (motion bar):
-  · Initial scaleY 0; whileInView scaleY value/35; transform-origin bottom.
-  · Duration 1s, delay i*0.1s, ease cubic-bezier(0.25, 0.1, 0.25, 1).
-  · Background highlight (bars 85-100 + 100-115): linear-gradient(0deg, #0066FF 0%, #00E5FF 100%), shadow 0 0 20px rgba(0,102,255,0.20).
-  · Background normal: linear-gradient(0deg, rgba(0,102,255,0.20) 0%, rgba(0,102,255,0.40) 100%).
-  · Group-hover brightness 110%.
-- Tooltip (group-hover only): top 0, mt -32px, bg #FFFFFF, border 1px rgba(0,102,255,0.20), text 12px weight 700 #0A102E, padding 6px 10px, rounded 4px, shadow 0 4px 12px rgba(0,0,0,0.10).
-  Texto: `${value}%`. Opacity 0 → 1 (300ms).
-- Label X-axis (abaixo da bar): 10-12px weight 700 #4A5578, mt 16px, whitespace-nowrap.
-  Mobile: rotate -45deg; Desktop: rotate 0.
-
-8 bars dataset:
-| name      | value  | highlight |
-|-----------|--------|-----------|
-| 40–55     | 0.68   | false     |
-| 55–70     | 3.02   | false     |
-| 70–85     | 11.52  | false     |
-| 85–100    | 31.64  | true ✓    |
-| 100–115   | 32.08  | true ✓    |
-| 115–130   | 12.34  | false     |
-| 130–145   | 3.77   | false     |
-| 145–160   | 4.95   | false     |
-
-(value/35 escalado para que a maior bar ocupe ~92% da altura.)
+PILAR 3 — Box icon (lucide, 3D cube)
+Title: "Interactive 3D format"
+Body: "Extends static pattern recognition with active manipulation — rotate the cube, infer the missing piece — bringing the task closer to real cognitive demands."
+(Verifiável: descreve literalmente o que o produto faz.)
 
 ANIMAÇÕES
-- Bars: stagger 100ms entre cada, com transform-origin bottom para "crescerem" do chão.
-- Tooltips: opacity transition no group-hover.
-- Counter-up dos stat cards.
+- Section header FadeIn standard (y 40 → 0, opacity 0 → 1, 0.6s ease-out).
+- Pilares stagger delay i*0.1s.
+- SEM counter-up (já não há números).
+- SEM bar chart.
 
 ACESSIBILIDADE
-- <section aria-labelledby="data-title">.
-- Bar chart com role="img" aria-label="IQ score distribution histogram. Most participants score between 85 and 115."
-- Texto descritivo equivalente em <figcaption> visualmente oculto:
-  "Distribution of 37,505 IQbe scores. Range 40–55: 0.68%. Range 55–70: 3.02%. Range 70–85: 11.52%. Range 85–100: 31.64%. Range 100–115: 32.08%. Range 115–130: 12.34%. Range 130–145: 3.77%. Range 145–160: 4.95%."
+- <section aria-labelledby="science-grounding-title">.
+- 3 pilares como <ul role="list"> com <li><article>.
+- Ícones aria-hidden="true".
 
 SEO
-- H2 com keyword "IQ score distribution".
-- JSON-LD Dataset:
-  {
-    "@type": "Dataset",
-    "name": "IQbe Real-World Performance Dataset",
-    "description": "Aggregated, anonymized IQ test results from 37,505 IQbe participants between ages 16-90.",
-    "creator": { "@type": "Organization", "name": "CogniFit" },
-    "variableMeasured": [
-      { "@type": "PropertyValue", "name": "IQ score", "value": "40-160" },
-      { "@type": "PropertyValue", "name": "Average IQ", "value": "102.43" },
-      { "@type": "PropertyValue", "name": "Median IQ", "value": "100" }
-    ],
-    "size": "37,505 records"
-  }
-- Stats com `<data value="37505">37,505</data>` para semântica.
+- H2 com keyword "Cognitive Science".
+- AI-snippet sentence (após o subtitle, opcional como <p class="sr-only"> ou inline 14px muted):
+  "IQbe is a non-verbal IQ test based on Raven's Progressive Matrices, with an interactive 3D format that adds active manipulation to traditional pattern recognition."
+- JSON-LD adicional Article ou ScholarlyArticle referenciando Raven 1938 (opcional).
 ```
 
-## Notas Webflow
+---
 
-- **Bar chart**: 8 divs com grid horizontal. Animação `scaleY` aplicada à barra fill. Webflow Interactions: Page Trigger "Scroll into view" → animate scale (Y axis only, transform origin Bottom Center).
-- **Counter-up nos stats**: usar Webflow native (sem suporte nativo) → custom JS (numeric.js ou animateCounter snippet).
-- **Snap horizontal**: CSS `scroll-snap-type: x mandatory; overflow-x: auto;` no container, e `scroll-snap-align: center` em cada card.
+## Prompt B — Versão numérica (SÓ se valores auditados pela equipa científica)
+
+> ⚠ Não usar até teres do whitepaper / dataset audit interno: snapshot date dos 37,505, método de cálculo da média 102.43, range canónico (40–160 vs 55–145), e justificação documentada para a cauda superior anómala (≥130 = 8,72% vs ~2,3% expected).
+
+```
+Edita APENAS os textos da secção "Backed by Real-World Data". Layout e visualização do chart mantêm-se. Substitui as strings.
+
+⚠ ANTES DE PUBLICAR:
+1. Pedir à equipa científica os 6 valores auditados (37,505 / 16–90 / 102.43 / 100 / 40–160 / 8 distribution %).
+2. Confirmar snapshot date (DD/MM/YYYY).
+3. Decidir range canónico (40–160 do dataset OU 55–145 do doc técnico — não os dois).
+4. Ter pronto: explicação para a cauda ≥130 inflada (self-selection / repeat attempts / escala IQbe).
+
+H2: "Backed by Real-World Data"
+(Tirar "Large-Scale" — só usar se o nº real (a confirmar) qualificar comparativamente em psicometria.)
+
+INTRO (centered max 720, 18px #4A5578):
+"IQbe is grounded in cognitive science and supported by real-world usage. As of [SNAPSHOT_DATE], an internal CogniFit dataset of [N] completed assessments shows a broad and interpretable score distribution."
+
+5 STAT BLOCKS (sem rectângulo, accent line top 2px #0066FF):
+1) [N] / Participants                  ← ex.: 37,505
+2) [AGE_MIN]–[AGE_MAX] / Age range     ← ex.: 16–90
+3) [MEAN] / Average IQ                 ← ex.: 102.43
+4) [MEDIAN] / Median IQ                ← ex.: 100
+5) [SCORE_MIN]–[SCORE_MAX] / Score range ← decidir 40–160 ou 55–145
+
+SOURCE NOTE (12px #4A5578, mt 16, abaixo dos stats):
+"Source: CogniFit IQbe internal dataset, snapshot of [SNAPSHOT_DATE]. Score range reflects the IQbe scaling."
+
+PARÁGRAFO ANTES DO CHART (centered max 720, 16px #4A5578):
+"Most users score between 85 and 115. The proportion above 130 is higher than in a theoretical normal distribution, consistent with self-selected online samples [or other documented explanation]."
+
+BAR CHART — alinhar labels com a secção 08:
+Trocar as 5 categorias actuais ("VERY LOW / BELOW AVG / AVERAGE / ABOVE AVG / VERY HIGH") por:
+"BELOW 85 / 85–100 / 100–115 / 115–130 / 130+"
+
+Manter as 8 barras visualmente, mas agrupar sob estas 5 labels:
+- BELOW 85 → 40–55, 55–70, 70–85
+- 85–100 → 1 barra
+- 100–115 → 1 barra
+- 115–130 → 1 barra
+- 130+ → 130–145, 145–160
+
+Os valores numéricos das 8 percentagens dependem do dataset auditado.
+
+(Manter highlight visual nas barras 85–100 e 100–115 = gradient azul→cyan; resto fica subtle.)
+```
+
+---
+
+## Notas Webflow (aplicáveis a ambos os prompts)
+
+- **Default = Prompt A**: implementar primeiro a versão qualitativa. É publicável e defensável já.
+- **Bar chart de Prompt B**: 8 divs com grid horizontal. Animação `scaleY` aplicada à barra fill. Webflow Interactions: Page Trigger "Scroll into view" → animate scale (Y axis only, transform origin Bottom Center).
+- **Counter-up nos stats** (Prompt B): script numeric.js ou snippet js custom — só implementar se os números forem auditados.
+- **JSON-LD Dataset**: só incluir se Prompt B for publicado, com cutoff date e source explícitos.
+- Se publicares Prompt A e mais tarde tiveres dados auditados, não há retrabalho de layout — só substituis os 3 pilares por stats + chart.
