@@ -43,9 +43,28 @@ BLOCO HTML COMPLETO PARA <head>
 <meta property="og:image:alt" content="IQbe — Premium IQ Test by CogniFit. 3D cube reasoning task." />
 <meta property="og:site_name" content="CogniFit" />
 <meta property="og:locale" content="en_US" />
-<!-- Master language: EN. Mantém os alternates abaixo APENAS se publicares páginas PT/ES separadas. -->
-<!-- <meta property="og:locale:alternate" content="pt_PT" /> -->
-<!-- <meta property="og:locale:alternate" content="es_ES" /> -->
+<!-- og:locale:alternate — todos os 21 outros locales (master = en_US acima). Ver prompt 16. -->
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_PT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="tr_TR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="he_IL" />
+<meta property="og:locale:alternate" content="el_GR" />
+<meta property="og:locale:alternate" content="sv_SE" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="no_NO" />
+<meta property="og:locale:alternate" content="fi_FI" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -83,11 +102,32 @@ BLOCO HTML COMPLETO PARA <head>
 <!-- Fonts (Plus Jakarta Sans — alinhada com cognifit.com/longevity) -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<!-- hreflang — só EN por default. Descomenta as outras linhas SE publicares páginas PT/ES separadas. -->
-<link rel="alternate" hreflang="en" href="https://brain.cognifit.com/IQ-test" />
+<!-- hreflang — matriz completa para 22 locales. Ver prompt 16 para estratégia.
+     Cola TODAS as 23 entradas (22 locales + x-default) em TODAS as páginas.
+     Cada locale auto-referencia + referencia os outros 21. Bidirecional. -->
 <link rel="alternate" hreflang="x-default" href="https://brain.cognifit.com/IQ-test" />
-<!-- <link rel="alternate" hreflang="pt-PT" href="https://brain.cognifit.com/pt/IQ-test" /> -->
-<!-- <link rel="alternate" hreflang="es" href="https://brain.cognifit.com/es/IQ-test" /> -->
+<link rel="alternate" hreflang="en"        href="https://brain.cognifit.com/IQ-test" />
+<link rel="alternate" hreflang="es"        href="https://brain.cognifit.com/es/IQ-test" />
+<link rel="alternate" hreflang="fr"        href="https://brain.cognifit.com/fr/IQ-test" />
+<link rel="alternate" hreflang="de"        href="https://brain.cognifit.com/de/IQ-test" />
+<link rel="alternate" hreflang="it"        href="https://brain.cognifit.com/it/IQ-test" />
+<link rel="alternate" hreflang="pt-PT"     href="https://brain.cognifit.com/pt/IQ-test" />
+<link rel="alternate" hreflang="pt-BR"     href="https://brain.cognifit.com/pt-br/IQ-test" />
+<link rel="alternate" hreflang="nl"        href="https://brain.cognifit.com/nl/IQ-test" />
+<link rel="alternate" hreflang="pl"        href="https://brain.cognifit.com/pl/IQ-test" />
+<link rel="alternate" hreflang="ru"        href="https://brain.cognifit.com/ru/IQ-test" />
+<link rel="alternate" hreflang="tr"        href="https://brain.cognifit.com/tr/IQ-test" />
+<link rel="alternate" hreflang="ja"        href="https://brain.cognifit.com/ja/IQ-test" />
+<link rel="alternate" hreflang="ko"        href="https://brain.cognifit.com/ko/IQ-test" />
+<link rel="alternate" hreflang="zh-CN"     href="https://brain.cognifit.com/zh/IQ-test" />
+<link rel="alternate" hreflang="zh-TW"     href="https://brain.cognifit.com/zh-tw/IQ-test" />
+<link rel="alternate" hreflang="ar"        href="https://brain.cognifit.com/ar/IQ-test" />
+<link rel="alternate" hreflang="he"        href="https://brain.cognifit.com/he/IQ-test" />
+<link rel="alternate" hreflang="el"        href="https://brain.cognifit.com/el/IQ-test" />
+<link rel="alternate" hreflang="sv"        href="https://brain.cognifit.com/sv/IQ-test" />
+<link rel="alternate" hreflang="da"        href="https://brain.cognifit.com/da/IQ-test" />
+<link rel="alternate" hreflang="no"        href="https://brain.cognifit.com/no/IQ-test" />
+<link rel="alternate" hreflang="fi"        href="https://brain.cognifit.com/fi/IQ-test" /> -->
 
 <!-- JSON-LD Organization -->
 <script type="application/ld+json">
@@ -108,7 +148,10 @@ BLOCO HTML COMPLETO PARA <head>
     "@type": "ContactPoint",
     "contactType": "customer support",
     "url": "https://support.cognifit.com/",
-    "availableLanguage": ["en"]
+    "availableLanguage": [
+      "en","es","fr","de","it","pt-PT","pt-BR","nl","pl","ru","tr",
+      "ja","ko","zh-CN","zh-TW","ar","he","el","sv","da","no","fi"
+    ]
   }]
 }
 </script>
