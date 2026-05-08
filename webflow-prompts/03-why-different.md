@@ -54,6 +54,8 @@ CTA TEXT LINK (centered, mt 40px)
 - Botão sem fundo, fonte 18px weight 700 #0066FF, hover #0A102E (color transition 300ms).
 - Texto + ícone ArrowRight (20px) com hover translateX +8px.
 - Texto: "Experience the difference"
+- onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank") — URL canónico de discovery (ver regra no 00 Design System).
+- aria-label="Experience the difference — start the IQbe assessment in a new tab".
 
 ⚠ ANTI-PATTERN: NÃO acrescentar bloco de stats abaixo deste CTA
 A IA do Figma Make tende a gerar um stats block "5 / 3D / 0" (5 Cognitive Dimensions, 3D Interactive Challenges, 0 Cultural Bias) após este CTA. Resistir:

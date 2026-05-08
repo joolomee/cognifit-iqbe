@@ -152,7 +152,7 @@ BLOCO HTML COMPLETO PARA <head>
     "priceCurrency": "USD",
     "category": "Premium",
     "availability": "https://schema.org/InStock",
-    "url": "https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE"
+    "url": "https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue"
   },
   "audience": [
     { "@type": "Audience", "audienceType": "Adults" },

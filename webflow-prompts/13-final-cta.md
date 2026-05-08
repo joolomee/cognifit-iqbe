@@ -42,7 +42,7 @@ CTA BUTTON (centered, flex column sm:row gap 24px)
 - Background: linear-gradient(90deg, #0066FF, #00A3FF).
 - Hover: from #0055DD to #0088DD + translateY -2px + shadow xl.
 - Texto: "Check My IQ Score" + ícone ArrowRight 20px ml 8px.
-- onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
+- onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
 
 TRUST INDICATORS (mt 40px, flex wrap justify-center gap-x 24px gap-y 12px, 14px weight 700 #4A5578) — SEM PILLS/RECTÂNGULOS
 3 itens em linha, só ícone + texto. Separados por dots 6px rgba(0,102,255,0.20):
@@ -75,7 +75,7 @@ SEO
   {
     "@type": "ReserveAction",
     "name": "Start IQbe IQ Test",
-    "target": "https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE..."
+    "target": "https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue"
   }
 - Marcar Page-level CTA com `data-action="primary-cta"`.
 

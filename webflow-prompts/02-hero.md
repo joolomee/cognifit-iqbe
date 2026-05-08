@@ -50,7 +50,7 @@ Bloco principal envolto em FadeIn (delay 0).
   · Hover: gradient escurece (from #0055DD to #0088DD) + translateY -2px (-translate-y-0.5) + shadow-xl. Transition 300ms.
   · Shadow base shadow-lg.
   · Conteúdo: texto "Check My IQ Score" + ArrowRight (lucide) 20x20 ml 8px.
-  · onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
+  · onClick: window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
 - REASSURANCE (flex column justify-center, 13px weight 500 #4A5578):
   · Linha 1: <CheckCircle> lucide 14x14 #00D4AA gap 6px + "100% Online & Secure"
   · Linha 2 (mt 4px): <CheckCircle> 14x14 #00D4AA + "Scientifically Validated"

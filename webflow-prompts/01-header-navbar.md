@@ -36,7 +36,7 @@ DIREITA (Log In + CTA)
   · Background: linear-gradient(90deg, #0066FF 0%, #00A3FF 100%).
   · Border-radius: 999px. Shadow: 0 8px 20px rgba(0,102,255,0.25).
   · Hover: -translate-y 2px + shadow 0 12px 28px rgba(0,229,255,0.35) + brightness 105%.
-  · onClick → window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
+  · onClick → window.open("https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue", "_blank")
 
 MOBILE (<1024px)
 - Esconder os 5 links centrais.

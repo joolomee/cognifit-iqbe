@@ -61,6 +61,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 ```
 
+## Regra de CTA canónico (GLOBAL)
+
+Todos os links e botões com intenção de **"Discover / Check / Start / Take the test"** apontam para um **único URL canónico** — a IQbe assessment com `testButtonUrl` no locale `/br/en/`:
+
+```
+https://www.cognifit.com/aplicaciones/html5/public/assessment/ASSESSMENT~@~IQBE?testButtonUrl=https://www.cognifit.com%2Fbr%2Fen%2Fbattery-of-tests%2Fiqbe-test%3Freg%3Dtrue
+```
+
+Aplicar a:
+- CTA primário do Header (`Check My IQ Score` / `Start Test` em mobile).
+- CTA primário do Hero (`Check My IQ Score`).
+- CTA primário do Final CTA (`Check My IQ Score`).
+- Qualquer text-link de discovery dentro de secções (ex.: `Experience the difference →` em 03 Why Different — apontar para o mesmo URL).
+- `target` do `PotentialAction` / `ReserveAction` no JSON-LD (prompt 13).
+- `offers.url` do `WebApplication` schema (prompt 15).
+
+**NÃO aplicar a:**
+- "Visit CogniFit.com" no Footer banner — esse é discovery do treino cerebral global, não da assessment IQbe → fica em `https://www.cognifit.com/`.
+- Links de breadcrumb / nav âncora interna (`#what-is-it`, `#reliability`, etc.).
+- Links da página externa CogniFit (Brain Games, App Store, Privacy Policy, etc.).
+
+**Quando este URL mudar** (ex.: novo locale, nova versão), fazer find-and-replace global em todos os prompts e re-publicar Webflow. Manter sempre uma única source of truth.
+
+Atributos obrigatórios em cada link CTA:
+- `target="_blank"` (abre nova tab — utilizador pode voltar para a landing).
+- `rel="noopener"` (segurança — evita que a target window manipule a parent window).
+- `aria-label="Check My IQ Score — start the IQbe assessment in a new tab"` ou equivalente descritivo (acessibilidade + GEO/AEO).
+
 ## Regra de informação justificável (GLOBAL)
 
 **Toda a copy com claims, números, percentagens, estatísticas, ratings ou metodologia tem de estar suportada por evidência interna ou pública verificável.** Não inventar números nem citar valores que não existem em estudo, dataset ou comunicação oficial CogniFit.
