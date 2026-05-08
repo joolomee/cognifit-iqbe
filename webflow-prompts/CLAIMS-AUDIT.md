@@ -107,6 +107,31 @@ Cada skill em si é ✅ defensável (são construtos psicométricos clássicos).
 
 5 score bands (Below 85 / 85-100 / 100-115 / 115-130 / 130+) — ✅ **DEFENSIBLE**. Estas faixas seguem convenção psicométrica reconhecida (Wechsler scale, normalmente: SD 15, M 100). Ver: APA standards.
 
+### Percentagens "~16% / ~34% / ~34% / ~14% / ~2%" — ✅ **TOTALMENTE DEFENSÁVEIS**
+
+Não são dados internos CogniFit. São derivadas matemáticas da distribuição normal teórica (μ=100, σ=15):
+
+| Banda | z-score | % real (normal) | Mostrado |
+|---|---|---|---|
+| Below 85 | z < -1 | 15.87% | ~16% ✓ |
+| 85–100 | z ∈ [-1, 0] | 34.13% | ~34% ✓ |
+| 100–115 | z ∈ [0, 1] | 34.13% | ~34% ✓ |
+| 115–130 | z ∈ [1, 2] | 13.59% | ~14% ✓ |
+| 130+ | z > 2 | 2.27% | ~2% ✓ |
+
+Verificável em qualquer livro de psicometria. Para chefe/legal: "estes valores são propriedades matemáticas da distribuição normal usada como referência em todos os testes de QI normalizados; não são dados internos."
+
+### ⚠ Risco de leitura ambígua
+
+A label original "~16% of population" pode ser lida como "16% dos utilizadores IQbe". Mudar para "~16% of **reference population**" remove a ambiguidade.
+
+### ⚠ Conflito potencial com 07 (se 07 publicar a versão numérica)
+
+- 07 Prompt B: 8,72% dos utilizadores IQbe ≥130.
+- 08: ~2% da reference population ≥130.
+
+Resolução: usar 07 Prompt A (qualitativa) + 08 com percentagens → narrativa coerente. Se obrigatório usar 07 Prompt B, reforçar "self-selected sample" em 07 e "reference population" em 08.
+
 ---
 
 ## 09 — Validity & Reliability ⚠ TODA A SECÇÃO PRECISA DE AUDIT
