@@ -13,6 +13,21 @@ LAYOUT
 ⚠ JUSTIFIABILITY NOTICE
 Toda esta secção depende de um dataset interno (37,505 participantes; idades 16–90; média/mediana de QI; distribuição). Antes de publicar, confirmar com a equipa científica/produto que estes números são VERIFICÁVEIS num documento interno (auditoria, paper, dataset audit). Se não houver evidência → REMOVER a secção inteira. Não suavizar com "estimated" ou "approximately".
 
+ANÁLISE PSICOMÉTRICA (preparar respostas para perguntas de chefe/legal):
+- Soma das 8 percentagens = 100,00% (consistente).
+- Mean 102.43 vs Median 100 → enviesamento direito ligeiro, esperável em amostra online auto-seleccionada.
+- ⚠ Cauda superior (≥130) = 8,72% (3,77+4,95). Numa distribuição normal (μ=100, σ=15) seria ~2,3%. **~4× inflated.** Possíveis explicações a ter pronto: (a) self-selection bias, (b) repeat attempts, (c) escala IQbe ≠ Wechsler. Adicionar disclaimer no parágrafo explicativo se for publicado.
+- ⚠ Score range 40–160 contradiz o doc técnico original (55–145, ver `src/imports/pasted_text/iqbe-landing-prompt.md` linha 469). Decidir um único range canónico antes de live.
+- ⚠ Labels do chart ("VERY LOW / BELOW AVG / AVERAGE / ABOVE AVG / VERY HIGH") não batem com as bandas da secção 08 ("Below 85 / 85-100 / 100-115 / 115-130 / 130+"). Alinhar.
+
+CHECKLIST DE AUDIT (passar à equipa científica antes de live):
+□ Snapshot date dos 37,505 (data exacta de cutoff).
+□ Método de cálculo da média 102.43.
+□ Confirmação que mediana 100 não é um valor "by design" mas sim um resultado real.
+□ Range real de scores (40–160 vs 55–145).
+□ Janela temporal "last two years" — datas exactas.
+□ Justificação documentada para a cauda superior anómala (>130 = 8,72%).
+
 SECTION HEADER
 - H2: "Backed by Large-Scale Real-World Use"
 - (sem subtitle no header, vai num parágrafo separado abaixo)

@@ -85,9 +85,19 @@ Cada skill em si é ✅ defensável (são construtos psicométricos clássicos).
 | 7.2 | "ages 16–90" | ⚠ | Dataset audit |
 | 7.3 | "average IQ 102.43" | ⚠ | Dataset audit (com método de cálculo) |
 | 7.4 | "median IQ 100" | ⚠ | Dataset audit |
-| 7.5 | "score range 40–160" | ⚠ | Dataset audit |
+| 7.5 | "score range 40–160" | ⚠❌ | **Conflito** com doc técnico (55–145, ver `iqbe-landing-prompt.md:469`). Decidir range canónico |
 | 7.6 | Distribution % (40–55 to 145–160, 8 bins) | ⚠ | Dataset audit |
-| 7.7 | "collected over the last two years" | ⚠ | Confirm date window |
+| 7.7 | "collected over the last two years" | ⚠ | Confirmar cutoff date exacto |
+| 7.8 | Cauda superior (≥130 = 8,72%) | ⚠ | **Inflada ~4× face a normal teórica.** Justificação documentada necessária |
+| 7.9 | Labels do chart ("VERY LOW / BELOW AVG / AVERAGE / ABOVE AVG / VERY HIGH") | ❌ | Não batem com a secção 08 ("Below 85 / 85-100 / 100-115 / 115-130 / 130+"). Alinhar |
+
+**Análise psicométrica para preparar respostas:**
+- Internamente coerente (soma % = 100, mean>median consistente com self-selection).
+- Anomalia da cauda superior precisa de explicação ready: self-selection forte, repeat attempts, ou escala IQbe ≠ Wechsler.
+
+**Decisão necessária:**
+- **Cenário A (dados auditados):** alinhar labels com secção 08, adicionar source note com cutoff date, pré-empt das anomalias no parágrafo.
+- **Cenário B (sem audit):** substituir por versão sem números (3 pilares qualitativos: peer-reviewed framework + non-verbal + adaptive difficulty).
 
 **SE não houver dataset audit acessível** → **REMOVER A SECÇÃO INTEIRA**. Substituir por bloco editorial (sem números) sobre metodologia. Não usar "approximately" / "estimated".
 
